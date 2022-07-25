@@ -1,0 +1,26 @@
+<div class="container">
+    <ul class="list-group">
+      <ng-template ngFor let-product [ngForOf]="productList">
+        <li
+          *ngIf="product.city.toLowerCase() == 'berlin'; else other_content"
+          class="list-group-item">
+            {{ product.contactName }}
+        </li>
+      </ng-template>
+  
+      <ng-template #other_content>
+        <li class="list-group-item">Else durumu</li>
+      </ng-template>
+    </ul>
+</div>
+  
+<div class="container mt-5">
+    <ul class="list-group" style="border: 1px solid red">
+      <li *ngFor="let product of productList" class="list-group-item">
+        <p>
+          {{ product.contactName }}
+        </p>
+      </li>
+    </ul>
+</div>
+<!-- <li *ngFor="let product of productList"></li> -->

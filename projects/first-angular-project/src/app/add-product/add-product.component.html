@@ -1,0 +1,10 @@
+<div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">Email address</label>
+    <input type="email" [(ngModel)]="email" (ngModelChange)="onEmailChange($event)" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+    <p>{{email}}</p>
+</div>
+<div class="mb-3">
+  <label for="exampleFormControlInput2" class="form-label">Password</label>
+  <input type="password" [(ngModel)]="password" class="form-control" id="exampleFormControlInput2">
+  <p>{{password}}</p>
+</div>

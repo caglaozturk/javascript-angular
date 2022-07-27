@@ -5,6 +5,9 @@
 </div>
 <div class="mb-3">
   <label for="exampleFormControlInput2" class="form-label">Password</label>
-  <input type="password" [(ngModel)]="password" class="form-control" id="exampleFormControlInput2">
+  <input type="password" [(ngModel)]="password" (ngModelChange)="onPasswordChange()" class="form-control" id="exampleFormControlInput2">
   <p>{{password}}</p>
+</div>
+<div class="mb-3">
+  <button (click)="changeEmail()" class="btn btn-primary">Tıkla</button>
 </div>

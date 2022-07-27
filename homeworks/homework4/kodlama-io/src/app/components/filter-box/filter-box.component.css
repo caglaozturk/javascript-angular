@@ -1,0 +1,95 @@
+.container {
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    padding: 0 30px;
+  }
+  .category-tab {
+    background-color: #fff;
+    border:none;
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 20px;
+  }
+  .category-opinion {
+    border: none;
+    font-size: 17px;
+  }
+  .search{
+    height: 50px; 
+    width: 20px;
+    padding: 0.8rem 1.25rem;
+  }
+  .search-icon{
+    size: 65rem;
+    display: flex;
+    justify-content: center;
+  }
+  .tab-1 {
+    display: flex;
+  }
+  .tab-2 input {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    height: 30px;
+  }
+  .card-container {
+    justify-content: space-around;
+    align-items: center;
+    display: flex;
+    padding: 20px;
+  }
+  .card1{
+    width: 400px;
+    justify-content: center;
+    border: 1px solid #8eb4cb;
+    padding: 0px;
+    margin-left: 50px;
+  }
+  .card1 img {
+    width: 400px;
+    display: flex;
+    justify-content: center;
+   
+  }
+  .dropdown {
+    float: left;
+    overflow: hidden;
+  }
+
+  .dropdown .dropbtn {
+    font-size: 25px;
+    border: none;
+    outline: none;
+    color: black;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+
+  .dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+
+  .dropdown-content a:hover {
+    background-color: #ddd;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }

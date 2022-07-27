@@ -18,4 +18,12 @@ export class AddProductComponent implements OnInit {
   onEmailChange(event:any=this.email){
     console.log(`Değer değişti ${event}`)
   }
+
+  onPasswordChange(){
+    console.log(`Password değişti : ${this.password}`)
+  }
+
+  changeEmail(){
+    this.email = 'Email Değiştirdim'
+  }
 }

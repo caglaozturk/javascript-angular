@@ -25,7 +25,7 @@ export class ProductCardListComponent implements OnInit {
   }
 
   getProducts(){
-    this.productService.getProducts().subscribe((data) => {
+    this.productService.getList().subscribe((data) => {
       this.productList = data
     })
     // subscribe yapmalıyım çünkü gelen cevabı beklemeliyim asenkron çalıştığı için

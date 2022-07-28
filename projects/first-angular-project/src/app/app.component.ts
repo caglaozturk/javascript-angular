@@ -11,6 +11,7 @@ export class AppComponent implements OnInit{
   ngOnInit(): void {
     console.log("app.component init fonksiyonu")
   }
+  // rem: ilgili cihazdaki varsayılan paragraf byutu genelde bilgisayarlarda 16px olur
   title = 'my-app';
   name = "Çağla Öztürk TypeScript";
   counter:number = 0;

@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Product } from 'src/app/models/product';
 
 @Component({
   selector: 'app-product-card',
@@ -6,7 +7,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
   styleUrls: ['./product-card.component.css']
 })
 export class ProductCardComponent implements OnInit {
-  @Input() product:any;
+  @Input() product!:Product;
   @Output() onBtnClick:any = new EventEmitter();
   constructor() { }
 
@@ -14,7 +15,7 @@ export class ProductCardComponent implements OnInit {
     console.log(this.product)
   }
 
-  addToCart(contactName:string){
-    this.onBtnClick.emit(contactName);
+  addToCart(){
+    this.onBtnClick.emit(this.product);
   }
 }

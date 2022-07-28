@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Product } from 'src/app/models/product';
+import { ProductsService } from 'src/app/services/products/products.service';
 
 @Component({
   selector: 'app-product-card-list',
@@ -12,7 +13,8 @@ export class ProductCardListComponent implements OnInit {
   cartItems:any[]=[];
   //httpClient: HttpClient
 
-  constructor(private httpClient: HttpClient) {
+  constructor(private httpClient: HttpClient, private productService:ProductsService) { 
+    // Dependency Injection ile Angular otomatik olarak inject eder.
     // this.httpClient = httpClient
     // this.productList.push(new ProductClass())
    }
@@ -23,10 +25,14 @@ export class ProductCardListComponent implements OnInit {
   }
 
   getProducts(){
-    this.httpClient.get<Product[]>("http://localhost:3000/products").subscribe(response => {
-      console.log(response)
-      //this.productList = [];
+    this.productService.getProducts().subscribe((data) => {
+      this.productList = data
     })
+    // subscribe yapmalıyım çünkü gelen cevabı beklemeliyim asenkron çalıştığı için
+    // this.httpClient.get<Product[]>("http://localhost:3000/products").subscribe(response => {
+    //   console.log(response)
+    //   this.productList = response;
+    // })
   }
 
   // fillProductDatas(){
@@ -97,12 +103,12 @@ export class ProductCardListComponent implements OnInit {
   //   }]
   // }
 
-  addToCartEvent(productName:any){
-    let itemToFind = this.cartItems.find(cart=>cart==productName)
+  addToCartEvent(product:Product){
+    let itemToFind = this.cartItems.find(cart=>cart==product.name)
     if(!itemToFind){
-      this.cartItems.push(productName)
+      this.cartItems.push(product.name)
     }
     console.log(this.cartItems)
-    console.log("product list fonksiyonu: ",productName)
+    console.log("product list fonksiyonu: ",product.name)
   }
 }

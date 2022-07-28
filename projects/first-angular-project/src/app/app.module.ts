@@ -13,6 +13,7 @@ import { HomepageComponent } from './pages/homepage/homepage.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { ProductCardComponent } from './components/product-card/product-card.component';
 import { ProductCardListComponent } from './components/product-card-list/product-card-list.component';
+import { CategoryListComponent } from './components/category-list/category-list.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { ProductCardListComponent } from './components/product-card-list/product
     HomepageComponent,
     NotFoundComponent,
     ProductCardComponent,
-    ProductCardListComponent
+    ProductCardListComponent,
+    CategoryListComponent
   ],
   imports: [
     BrowserModule,

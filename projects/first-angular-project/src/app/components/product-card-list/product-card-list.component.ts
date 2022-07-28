@@ -11,6 +11,7 @@ import { ProductsService } from 'src/app/services/products/products.service';
 export class ProductCardListComponent implements OnInit {
   productList!:Product[];
   cartItems:any[]=[];
+  loading:boolean = false;
   //httpClient: HttpClient
 
   constructor(private httpClient: HttpClient, private productService:ProductsService) { 
@@ -21,12 +22,15 @@ export class ProductCardListComponent implements OnInit {
 
   ngOnInit(): void {
     // this.fillProductDatas();
-    this.getProducts();
+    setTimeout(() => {      
+      this.getProducts();
+    }, 2000);
   }
 
   getProducts(){
     this.productService.getList().subscribe((data) => {
       this.productList = data
+      this.loading = true;
     })
     // subscribe yapmalıyım çünkü gelen cevabı beklemeliyim asenkron çalıştığı için
     // this.httpClient.get<Product[]>("http://localhost:3000/products").subscribe(response => {

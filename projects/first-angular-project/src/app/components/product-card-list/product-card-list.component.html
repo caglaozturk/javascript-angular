@@ -1,8 +1,47 @@
 <p>Sepetinizde {{cartItems.length}} ürün var</p>
 
 <div class="row">
-    <div class="col-4" *ngFor="let p of productList">
-      <app-product-card [product]="p" (onBtnClick)="addToCartEvent($event)"></app-product-card>
-      <!-- <app-product-card product="{{p}}"></app-product-card> -->
+  <div class="col-3">
+    <app-category-list></app-category-list>
+  </div>
+  <div class="col-9 d-flex align-items-center justify-content-center">
+    <div class="row" *ngIf="productList; else other;">
+      <div class="col-sm-12 col-lg-6 col-xl-4" *ngFor="let p of productList">
+        <app-product-card [product]="p" (onBtnClick)="addToCartEvent($event)"></app-product-card>
+        <!-- <app-product-card product="{{p}}"></app-product-card> -->
+      </div>
     </div>
+    <ng-template #other>        
+      <div class="spinner-border text-secondary" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+    </ng-template>
+  </div>
 </div>
+
+
+
+
+
+<!-- <p>Sepetinizde {{cartItems.length}} ürün var</p>
+
+<div class="row">
+  <div class="col-3">
+    <app-category-list></app-category-list>
+  </div>
+  <div class="col-9">
+    <ng-template  [ngIf]="loading" [ngIfElse]="other">
+      <div class="row">
+        <div class="col-sm-12 col-lg-6 col-xl-4" *ngFor="let p of productList">
+          <app-product-card [product]="p" (onBtnClick)="addToCartEvent($event)"></app-product-card>
+        </div>
+      </div>
+    </ng-template>
+    <ng-template #other>        
+      <div class="spinner-border" role="status">
+        <span class="sr-only">Loading...</span>
+      </div>
+    </ng-template>
+  </div>
+</div> -->
+

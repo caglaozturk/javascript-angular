@@ -1,0 +1,11 @@
+<div class="list-group" *ngIf="categories; else other;">
+    <button type="button" class="list-group-item list-group-item-action active">
+      Category
+    </button>
+    <button type="button" (click)="getCategoryById(category)" *ngFor="let category of categories" class="list-group-item list-group-item-action">{{category.name}}</button>
+</div>
+<ng-template #other>        
+  <div class="spinner-border text-primary" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+</ng-template>

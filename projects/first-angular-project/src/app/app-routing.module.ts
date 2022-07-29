@@ -4,6 +4,7 @@ import { AddProductComponent } from './components/add-product/add-product.compon
 import { CalculatorComponent } from './components/calculator/calculator.component';
 import { ProductCardListComponent } from './components/product-card-list/product-card-list.component';
 import { ProductListComponent } from './components/product-list/product-list.component';
+import { RegisterComponent } from './components/register/register.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 
 const routes: Routes = [
@@ -12,6 +13,7 @@ const routes: Routes = [
   { path: 'product-cart-list', component: ProductCardListComponent},
   { path: 'add-product', component: AddProductComponent },
   { path: 'calculator', component: CalculatorComponent },
+  { path: 'register', component: RegisterComponent },
   { path: '**', component: NotFoundComponent}
 ];
 

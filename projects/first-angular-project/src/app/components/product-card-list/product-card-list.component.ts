@@ -30,7 +30,7 @@ export class ProductCardListComponent implements OnInit {
 
   getProducts(){
     this.productService.getList().subscribe((data) => {
-      this.productList = []
+      this.productList = data;
       this.loading = true;
       if(this.productList.length>0) this.isProduct = true;
     })

@@ -5,11 +5,20 @@
     <app-category-list></app-category-list>
   </div>
   <div class="col-9 d-flex align-items-center justify-content-center">
-    <div class="row" *ngIf="productList; else other;">
-      <div class="col-sm-12 col-lg-6 col-xl-4" *ngFor="let p of productList">
-        <app-product-card [product]="p" (onBtnClick)="addToCartEvent($event)"></app-product-card>
-        <!-- <app-product-card product="{{p}}"></app-product-card> -->
+    <div class="container" *ngIf="productList; else other;">
+      <div *ngIf="isProduct; else emptyProduct">
+        <div class="row">
+          <div class="col-sm-12 col-lg-6 col-xl-4" *ngFor="let p of productList">
+            <app-product-card [product]="p" (onBtnClick)="addToCartEvent($event)"></app-product-card>
+            <!-- <app-product-card product="{{p}}"></app-product-card> -->
+          </div>
+        </div>
       </div>
+      <ng-template #emptyProduct>
+        <div class="alert alert-primary" role="alert">
+          There are no products
+        </div>
+      </ng-template>
     </div>
     <ng-template #other>        
       <div class="spinner-border text-secondary" role="status">

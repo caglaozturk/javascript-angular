@@ -12,6 +12,7 @@ export class ProductCardListComponent implements OnInit {
   productList!:Product[];
   cartItems:any[]=[];
   loading:boolean = false;
+  isProduct:boolean = false;
   //httpClient: HttpClient
 
   constructor(private httpClient: HttpClient, private productService:ProductsService) { 
@@ -24,13 +25,14 @@ export class ProductCardListComponent implements OnInit {
     // this.fillProductDatas();
     setTimeout(() => {      
       this.getProducts();
-    }, 2000);
+    }, 100);
   }
 
   getProducts(){
     this.productService.getList().subscribe((data) => {
-      this.productList = data
+      this.productList = []
       this.loading = true;
+      if(this.productList.length>0) this.isProduct = true;
     })
     // subscribe yapmalıyım çünkü gelen cevabı beklemeliyim asenkron çalıştığı için
     // this.httpClient.get<Product[]>("http://localhost:3000/products").subscribe(response => {

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { Customer } from 'src/app/models/customer';
+import { CustomerService } from 'src/app/services/customers/customer.service';
 
 @Component({
   selector: 'app-register',
@@ -11,7 +13,7 @@ export class RegisterComponent implements OnInit {
   // companyName = new FormControl('kodlama.io', Validators.required);
   // bu şekilde olursa html de [formControl]="companyName" böyle kullanmalıyız
 
-  constructor(private formBuilder:FormBuilder) { }
+  constructor(private formBuilder:FormBuilder, private customerService:CustomerService) { }
 
   ngOnInit(): void {
     this.createRegisterForm();
@@ -39,6 +41,15 @@ export class RegisterComponent implements OnInit {
       console.log("gerekli alanları doldurunuz")
       return;
     }
-    console.log(this.registerForm.value)
+
+    const customer:Customer = {
+      ...this.registerForm.value,      // object, array
+      city: this.registerForm.value.city.toUpperCase()
+      //companyName: this.registerForm.get('companyName')!.value
+    }
+
+    this.customerService.add(customer).subscribe(response => {
+      console.info(response)
+    })
   }
 }

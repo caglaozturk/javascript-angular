@@ -49,7 +49,7 @@ export class UpdateCustomerComponent implements OnInit {
 
   update() {
     if(this.updateCustomerForm.invalid){
-      alert("Gerekli alanları doldurunuz")
+      alert("Please fill the required areas!!!")
       return;
     }
     this.customer = Object.assign({}, this.updateCustomerForm.value);

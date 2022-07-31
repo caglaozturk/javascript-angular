@@ -15,7 +15,7 @@ export class CategoryListComponent implements OnInit {
   ngOnInit(): void {
     setTimeout(() => {      
       this.getCategories();
-    }, 2000);
+    }, 200);
   }
 
   getCategories() {

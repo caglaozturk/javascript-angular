@@ -1,13 +1,14 @@
 // CTRL+ Alt + V
 export interface Customer {
 	id: number;
-	supplierId: number;
-	categoryId: number;
-	quantityPerUnit: string;
-	unitPrice: number;
-	unitsInStock: number;
-	unitsOnOrder: number;
-	reorderLevel: number;
-	discontinued: boolean;
-	name: string;
+	companyName: string;
+	contactName: string;
+	contactTitle: string;
+	street: string;
+	city: string;
+	region: string;
+	postalCode: number;
+	country: string;
+	phone: string;
+	customerKey: string;
 }

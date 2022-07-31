@@ -15,6 +15,8 @@ import { ProductCardComponent } from './components/product-card/product-card.com
 import { ProductCardListComponent } from './components/product-card-list/product-card-list.component';
 import { CategoryListComponent } from './components/category-list/category-list.component';
 import { RegisterComponent } from './components/register/register.component';
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { UpdateCustomerComponent } from './pages/update-customer/update-customer.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { RegisterComponent } from './components/register/register.component';
     ProductCardComponent,
     ProductCardListComponent,
     CategoryListComponent,
-    RegisterComponent
+    RegisterComponent,
+    DashboardComponent,
+    UpdateCustomerComponent
   ],
   imports: [
     BrowserModule,

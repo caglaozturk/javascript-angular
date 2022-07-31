@@ -49,6 +49,11 @@ export class RegisterComponent implements OnInit {
     }
 
     this.customerService.add(customer).subscribe(response => {
+      setTimeout(() => {
+        location.reload();
+        location.href="/dashboard/customer"
+        alert("Customer succesfully added!")
+      }, 1000);
       console.info(response)
     })
   }

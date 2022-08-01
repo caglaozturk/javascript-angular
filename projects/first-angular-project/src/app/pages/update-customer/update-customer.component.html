@@ -1,4 +1,4 @@
-<form *ngIf="customer" [formGroup]="updateCustomerForm" (ngSubmit)="update()">
+<form *ngIf="customerForm" [formGroup]="customerForm" (ngSubmit)="save()">
     <div class="mb-3">
         <label for="companyName" class="form-label">Company Name</label>
         <input type="text" class="form-control" id="companyName" placeholder="" formControlName="companyName" >
@@ -13,7 +13,6 @@
         <label for="contactTitle" class="form-label">Contact Title</label>
         <input type="text" class="form-control" id="contactTitle" placeholder="" formControlName="contactTitle">
     </div>
-
 
     <div class="mb-3">
         <label for="street" class="form-label">Street</label>
@@ -50,4 +49,6 @@
         <input type="text" class="form-control" id="customerKey" placeholder="" formControlName="customerKey">
     </div>
     <div class="mb-3"><button type="submit" class="btn btn-warning">Update</button></div>
+    <!-- submit kullandığımızda için de olan formu submit ediyor, 
+    herhangi bir form göndermeyeceksek type="button" kullanılır yani örneğin counter artacaksa veya routerlink yönlendireceksek o zaman type="button"  -->
 </form> 

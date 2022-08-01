@@ -10,7 +10,7 @@ export class NavbarComponent implements OnInit {
     {label: 'Home', url : '/homepage'},
     {label: 'Add Product', url : '/add-product'},
     {label: 'Calculator', url : '/calculator'},
-    {label: 'Register', url : '/register'},
+    {label: 'Register', url : '/dashboard/customer/add'},
     {label: 'Product Cart List', url : '/product-cart-list'}    
   ]
   constructor() { }

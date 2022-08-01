@@ -15,8 +15,8 @@ const routes: Routes = [
   { path: 'product-cart-list', component: ProductCardListComponent},
   { path: 'add-product', component: AddProductComponent },
   { path: 'calculator', component: CalculatorComponent },
-  { path: 'register', component: RegisterComponent },
-  {path: 'dashboard/customer',component:DashboardComponent },
+  { path: 'dashboard/customer/add', component: UpdateCustomerComponent },
+  {path: 'dashboard/customers',component:DashboardComponent },
   {path: 'dashboard/customer/:id',component:UpdateCustomerComponent },
   { path: '**', component: NotFoundComponent}
 ];

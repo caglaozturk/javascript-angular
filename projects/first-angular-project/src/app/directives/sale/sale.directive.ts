@@ -6,9 +6,11 @@ import { Directive, ElementRef, HostListener, Input } from '@angular/core';
 export class SaleDirective {
   @Input() appOnSale = 'red';
   @Input() onSaleColor:string = 'purple';
+  @Input() onSaleText:string = 'On Sale';
   
   constructor(private elementRef:ElementRef) { 
     this.changeBackgroundColor('green');
+    this.elementRef.nativeElement.innerHTML += this.onSaleText;
   }
 
   @HostListener('mouseenter') onMouseEnter() {

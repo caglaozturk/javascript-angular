@@ -7,6 +7,8 @@ import { ProductListComponent } from './components/product-list/product-list.com
 import { RegisterComponent } from './components/register/register.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
+import { ProductDashboardComponent } from './pages/product-dashboard/product-dashboard.component';
+import { ProductFormComponent } from './pages/product-form/product-form.component';
 import { UpdateCustomerComponent } from './pages/update-customer/update-customer.component';
 
 const routes: Routes = [
@@ -18,6 +20,9 @@ const routes: Routes = [
   { path: 'dashboard/customer/add', component: UpdateCustomerComponent },
   {path: 'dashboard/customers',component:DashboardComponent },
   {path: 'dashboard/customer/:id',component:UpdateCustomerComponent },
+  {path: 'dashboard/product/add',component:ProductFormComponent },
+  {path: 'dashboard/products',component:ProductDashboardComponent },
+  {path: 'dashboard/product/:id',component:ProductFormComponent },
   { path: '**', component: NotFoundComponent}
 ];
 

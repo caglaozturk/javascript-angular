@@ -1,0 +1,38 @@
+<button type="button" class="btn btn-dark" routerLink="/dashboard/product/add">Add Product</button>
+<br>
+<br>
+
+<table  class="table table-light table-hover">
+    <thead>
+      <tr >
+        <th scope="col">ID</th>
+        <th scope="col">Name</th>
+        <th scope="col">Supplier Id</th>
+        <th scope="col">Category Id</th>
+        <th scope="col">Quantity Per Unit</th>
+        <th scope="col">Unit Price</th>
+        <th scope="col">Units In Stock</th>
+        <th scope="col">Units On Order</th>
+        <th scope="col">Reorder Level</th>
+        <th scope="col">Discontinued</th>
+        <th scope="col">Update</th>
+        <th scope="col">Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of productList">
+        <th scope="row">{{product.id}}</th>
+        <td>{{product.name}}</td>
+        <td>{{product.supplierId}}</td>
+        <td>{{product.categoryId}}</td>
+        <td>{{product.quantityPerUnit}}</td>
+        <td>{{product.unitPrice}}</td>
+        <td>{{product.unitsInStock}}</td>
+        <td>{{product.unitsOnOrder}}</td>
+        <td>{{product.reorderLevel}}</td>
+        <td>{{product.discontinued}}</td>
+        <td><button type="button" (click)="selectedProductId(product)" class="btn btn-warning"><i class="fa-solid fa-pen-to-square" style="color: black;"></i></button></td>
+        <td><button type="button"(click)="deleteProduct(product.id)" class="btn btn-danger"><i class="fa-solid fa-trash-can" style="color: black;"></i></button></td>
+      </tr>
+    </tbody>
+  </table>

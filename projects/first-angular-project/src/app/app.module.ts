@@ -19,6 +19,8 @@ import { CategoryListComponent } from './components/category-list/category-list.
 import { RegisterComponent } from './components/register/register.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { UpdateCustomerComponent } from './pages/update-customer/update-customer.component';
+import { ProductFormComponent } from './pages/product-form/product-form.component';
+import { ProductDashboardComponent } from './pages/product-dashboard/product-dashboard.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +36,9 @@ import { UpdateCustomerComponent } from './pages/update-customer/update-customer
     CategoryListComponent,
     RegisterComponent,
     DashboardComponent,
-    UpdateCustomerComponent
+    UpdateCustomerComponent,
+    ProductFormComponent,
+    ProductDashboardComponent
   ],
   imports: [
     BrowserModule,

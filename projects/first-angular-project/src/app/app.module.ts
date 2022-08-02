@@ -21,6 +21,7 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { UpdateCustomerComponent } from './pages/update-customer/update-customer.component';
 import { ProductFormComponent } from './pages/product-form/product-form.component';
 import { ProductDashboardComponent } from './pages/product-dashboard/product-dashboard.component';
+import { KdvPipe } from './pipes/kdv/kdv.pipe';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { ProductDashboardComponent } from './pages/product-dashboard/product-das
     DashboardComponent,
     UpdateCustomerComponent,
     ProductFormComponent,
-    ProductDashboardComponent
+    ProductDashboardComponent,
+    KdvPipe
   ],
   imports: [
     BrowserModule,

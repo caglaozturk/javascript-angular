@@ -22,13 +22,14 @@
     <tbody>
       <tr *ngFor="let product of productList">
         <th scope="row">{{product.id}}</th>
-        <td>{{product.name}}</td>
+        <td>{{product.name | uppercase}}</td>
         <td>{{product.supplierId}}</td>
         <td>{{product.categoryId}}</td>
         <td>{{product.quantityPerUnit}}</td>
-        <td>{{product.unitPrice}}</td>
+        <!-- alt gr + t => ₺ -->
+        <td>{{product.unitPrice | currency: '₺'}}</td>
         <td>{{product.unitsInStock}}</td>
-        <td>{{product.unitsOnOrder}}</td>
+        <td>{{product.unitsOnOrder | kdv: 0.8 }}</td>
         <td>{{product.reorderLevel}}</td>
         <td>{{product.discontinued}}</td>
         <td><button type="button" (click)="selectedProductId(product)" class="btn btn-warning"><i class="fa-solid fa-pen-to-square" style="color: black;"></i></button></td>

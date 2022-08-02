@@ -69,6 +69,7 @@ export class ProductFormComponent implements OnInit {
 
   getProductById(id:number) {
     this.productService.getById(id).subscribe((data) => {
+      console.log(data)
       this.product = data;
       this.createProductForm();
     });

@@ -1,8 +1,8 @@
 <div class="card mb-3" style="width: 18rem;">
     <img src="assets/images/product1.jpg" class="card-img-top" alt="...">
-    <div class="card-body">
+    <div [ngClass]="{'card-body': isCard}">
       <h5 class="card-title">{{product.name}}</h5>
-      <p class="card-text">{{product.quantityPerUnit}}</p>
+      <p class="card-text" appOnSale onSaleColor="pink">{{product.quantityPerUnit}}</p>
       <p class="card-text">Price: {{product.unitPrice}}</p>
       <p class="card-text">Stock: {{product.unitsInStock}}</p>
       <button (click)="addToCart()" class="btn btn-dark">Sepete Ekle</button>

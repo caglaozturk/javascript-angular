@@ -9,6 +9,8 @@ import { Product } from 'src/app/models/product';
 export class ProductCardComponent implements OnInit {
   @Input() product!:Product;
   @Output() onBtnClick:any = new EventEmitter();
+  isCard:boolean = true;
+  color = 'blue';
   constructor() { }
 
   ngOnInit(): void {

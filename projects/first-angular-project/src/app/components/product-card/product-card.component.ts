@@ -11,10 +11,10 @@ export class ProductCardComponent implements OnInit {
   @Output() onBtnClick:any = new EventEmitter();
   isCard:boolean = true;
   onMouseColor = 'blue';
+  onSaleText = "İndirim!!!";
   constructor() { }
 
   ngOnInit(): void {
-    console.log(this.product)
   }
 
   addToCart(){

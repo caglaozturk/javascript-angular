@@ -18,7 +18,7 @@ export class ProductsService {
   }
 
   getById(id:number): Observable<Product> {
-    return this.httpClient.get<Product>(`${this.apiControllerUrl}/${id}}`)
+    return this.httpClient.get<Product>(`${this.apiControllerUrl}/${id}`)
   }
 
   add(product:Product): Observable<Product>{

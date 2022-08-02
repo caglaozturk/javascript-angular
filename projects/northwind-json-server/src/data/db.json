@@ -2042,18 +2042,6 @@
       "discontinued": false,
       "name": "Çağla Öztürk",
       "id": 84
-    },
-    {
-      "name": "product",
-      "supplierId": "4",
-      "categoryId": "3",
-      "quantityPerUnit": "product",
-      "unitPrice": "product",
-      "unitsInStock": "product",
-      "unitsOnOrder": "product",
-      "reorderLevel": "product",
-      "discontinued": "product",
-      "id": 85
     }
   ],
   "categories": [

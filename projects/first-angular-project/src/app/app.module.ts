@@ -25,6 +25,7 @@ import { KdvPipe } from './pipes/kdv/kdv.pipe';
 import { SaleDirective } from './directives/sale/sale.directive';
 import { FilterProductPipe } from './pipes/filterProduct/filter-product.pipe';
 import { ClickProductCardDirective } from './directives/clickProductCard/click-product-card.directive';
+import { IfNotDirective } from './directives/ifNot/if-not.directive';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import { ClickProductCardDirective } from './directives/clickProductCard/click-p
     KdvPipe,
     SaleDirective,
     FilterProductPipe,
-    ClickProductCardDirective
+    ClickProductCardDirective,
+    IfNotDirective
   ],
   imports: [
     BrowserModule,

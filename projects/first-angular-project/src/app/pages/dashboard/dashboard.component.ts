@@ -10,6 +10,8 @@ import { CustomerService } from 'src/app/services/customers/customer.service';
 })
 export class DashboardComponent implements OnInit {
   customerList! : Customer[];
+  
+  status:string='init';
 
   constructor(private customerService:CustomerService, private router:Router) { }
 
@@ -17,8 +19,16 @@ export class DashboardComponent implements OnInit {
     this.getCustomers();
   }
 
+  changeStatus(val:string) {
+    setTimeout(() => {
+      this.status=val;
+    }, 1000);
+  }
+
   getCustomers(){
-    this.customerService.getList().subscribe((response) =>{
+    this.changeStatus('loading');
+    this.customerService.getList().subscribe((response) =>{      
+      this.changeStatus('loaded');
       this.customerList = response;
     })
   }

@@ -1,4 +1,3 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Product } from 'src/app/models/product';
 import { ProductsService } from 'src/app/services/products/products.service';
@@ -13,9 +12,11 @@ export class ProductCardListComponent implements OnInit {
   cartItems:any[]=[];
   loading:boolean = false;
   isProduct:boolean = false;
+  today: number = Date.now();
+  filterText:string="";
   //httpClient: HttpClient
 
-  constructor(private httpClient: HttpClient, private productService:ProductsService) { 
+  constructor(private productService:ProductsService) { 
     // Dependency Injection ile Angular otomatik olarak inject eder.
     // this.httpClient = httpClient
     // this.productList.push(new ProductClass())

@@ -4,13 +4,17 @@
   <div class="col-3">
     <app-category-list></app-category-list>
   </div>
-  <div class="col-9 d-flex align-items-center justify-content-center">
+  <div class="col-9">
     <div class="container">
-      <p>Sepetinizde {{cartItems.length}} ürün var</p>
+      <p>Sepetinizde {{cartItems.length}} ürün var</p>      
+      <div class="mt-2 mb-3">
+        <span  class="" style="color: white;background-color: black; float: right;">Today is {{today | date:"medium"}}</span>
+        <input class="form-control" type="text" [(ngModel)]="filterText" placeholder="Search" style="width: 300px;">
+      </div>      
       <div class="row" *ngIf="productList; else other;">
         <div *ngIf="isProduct; else emptyProduct">
           <div class="row">
-            <div class="col-sm-12 col-lg-6 col-xl-4" *ngFor="let p of productList">
+            <div class="col-sm-12 col-lg-6 col-xl-4" *ngFor="let p of productList | filterProduct:filterText" >
               <app-product-card [product]="p" (onBtnClick)="addToCartEvent($event)"></app-product-card>
               <!-- <app-product-card product="{{p}}"></app-product-card> -->
             </div>
@@ -22,6 +26,7 @@
           </div>
         </ng-template>
       </div>
+      <div class="mt-3" *ngIf="!(productList | filterProduct:filterText)?.length">No Result Found!</div> 
     </div>
     <ng-template #other>        
       <div class="spinner-border text-secondary" role="status">

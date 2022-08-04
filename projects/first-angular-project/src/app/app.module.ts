@@ -26,6 +26,9 @@ import { SaleDirective } from './directives/sale/sale.directive';
 import { FilterProductPipe } from './pipes/filterProduct/filter-product.pipe';
 import { ClickProductCardDirective } from './directives/clickProductCard/click-product-card.directive';
 import { IfNotDirective } from './directives/ifNot/if-not.directive';
+import { OrderListComponent } from './pages/order-list/order-list.component';
+import { MultipleDirective } from './directives/multiple/multiple.directive';
+import { WelcomeDirective } from './directives/welcome/welcome.directive';
 
 @NgModule({
   declarations: [
@@ -48,7 +51,10 @@ import { IfNotDirective } from './directives/ifNot/if-not.directive';
     SaleDirective,
     FilterProductPipe,
     ClickProductCardDirective,
-    IfNotDirective
+    IfNotDirective,
+    OrderListComponent,
+    MultipleDirective,
+    WelcomeDirective
   ],
   imports: [
     BrowserModule,

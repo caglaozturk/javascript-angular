@@ -12,11 +12,17 @@
       </tr>
     </thead>
     <tbody>
-      <tr *appWelcome="2000; else notFound">
-        <td colspan="8">Welcome</td>
+      <tr *appWelcome="2000; else showList">
+        <td colspan="8">
+          <span class="m-3" *appMultiple="5">
+            <div class="spinner-grow text-dark" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
+        </span>
+        </td>
       </tr>
-      <ng-template #notFound>
-        <tr *appMultiple="let order of orderList;">
+      <ng-template #showList>
+        <tr *appMyFor="let order of orderList;">
           <th scope="row">{{order.id}}</th>
           <td>{{order.shipName | uppercase}}</td>
           <td>{{order.customerKey}}</td>

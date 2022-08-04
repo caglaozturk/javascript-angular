@@ -12,14 +12,14 @@ export class OrderListComponent implements OnInit {
 
   orderList! : Order[];
 
-  constructor(private productService:OrdersService,private router:Router) { }
+  constructor(private orderService:OrdersService) { }
 
   ngOnInit(): void {
     this.getProducts();
   }
 
   getProducts(){
-    this.productService.getList().subscribe((response) =>{
+    this.orderService.getList().subscribe((response) =>{
       this.orderList = response;
     })
   }

@@ -29,6 +29,7 @@ import { IfNotDirective } from './directives/ifNot/if-not.directive';
 import { OrderListComponent } from './pages/order-list/order-list.component';
 import { MultipleDirective } from './directives/multiple/multiple.directive';
 import { WelcomeDirective } from './directives/welcome/welcome.directive';
+import { MyForDirective } from './directives/myFor/my-for.directive';
 
 @NgModule({
   declarations: [
@@ -54,7 +55,8 @@ import { WelcomeDirective } from './directives/welcome/welcome.directive';
     IfNotDirective,
     OrderListComponent,
     MultipleDirective,
-    WelcomeDirective
+    WelcomeDirective,
+    MyForDirective
   ],
   imports: [
     BrowserModule,

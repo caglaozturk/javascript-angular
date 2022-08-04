@@ -6,7 +6,7 @@ import { Category } from 'src/app/models/category';
 import { Product } from 'src/app/models/product';
 import { Supplier } from 'src/app/models/supplier';
 import { CategoryService } from 'src/app/services/category/category.service';
-import { ProductsService } from 'src/app/services/products/products.service';
+import { ProductsService } from 'src/app/features/products/services/products/products.service';
 import { SuppliersService } from 'src/app/services/suppliers/suppliers.service';
 
 @Component({

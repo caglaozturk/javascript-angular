@@ -28,9 +28,9 @@ import { CategoryListComponent } from 'src/app/components/category-list/category
     ReactiveFormsModule
   ],
   exports: [
+    // Başka modüllerin de kullanmasını istiyorsam export etmeliyim
+    // homepage de örneğin product-cart-list'i kullandığım için burada export ettim ama diğer componentleri kullanmadığım için onları export etmeme gerek kalmadı
     ProductCardListComponent,
-    ProductCardComponent,
-    ProductListComponent,
     KdvPipe
   ],
 })

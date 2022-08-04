@@ -5,7 +5,7 @@
   <h1 *ngSwitchCase="'init'">Welcome...</h1>
   <ng-container *ngSwitchCase="'loaded'">
     <div *ngIf="customerList.length>0 ; else notFound"></div>
-    <table *ngIfNot="customerList.length===0" class="table table-light table-hover">
+    <table class="table table-light table-hover">
       <thead>
         <tr >
           <th scope="col">ID</th>

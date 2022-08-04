@@ -9,6 +9,7 @@ export class SaleDirective {
   @Input() onSaleText:string = 'On Sale';
   @Input() isOnSale:boolean = true;
   
+  //Attribute Directive : Görünüm veya diğer özelliklerini değiştirebiliriz * olmadan çağırabiliriz
   constructor(private elementRef:ElementRef, private renderer:Renderer2) { 
     console.log(this.onSaleText)   
   }

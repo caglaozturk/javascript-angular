@@ -4,6 +4,7 @@ import { Directive, Input, TemplateRef, ViewContainerRef } from '@angular/core';
   selector: '[ngIfNot]'
 })
 export class IfNotDirective {
+  // Structual Directive(Yapısal Directive): İlgili elemanın davranışını değiştirmekten ziyade içindeki yapıyı ele alarak hareket ettik
   @Input("ngIfNotElse") elseTemplateRef!:TemplateRef<any>;
 
   private hasView: boolean=false;

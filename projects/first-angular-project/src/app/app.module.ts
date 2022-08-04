@@ -25,6 +25,7 @@ import { MyForDirective } from './directives/myFor/my-for.directive';
 import { ProductsModule } from './features/products/products.module';
 import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
+import { AuthModule } from './core/auth/auth.module';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,6 @@ import { SharedModule } from './shared/shared.module';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
@@ -55,7 +55,9 @@ import { SharedModule } from './shared/shared.module';
     ToastrModule.forRoot(), // ToastrModule added
     ProductsModule,
     CoreModule,
-    SharedModule
+    SharedModule,
+    AuthModule,    
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { CoreRoutingModule } from './core-routing.module';
 import { IfNotDirective } from './directives/ifNot/if-not.directive';
 import { AuthModule } from './auth/auth.module';
+import { StorageModule } from './storage/storage.module';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { AuthModule } from './auth/auth.module';
   imports: [
     CommonModule,
     CoreRoutingModule,
-    AuthModule
+    AuthModule,
+    StorageModule
   ]
   //İfmodule'ı kullanan moduller de görebilsin diye burda import etmemiz gerekiyor
 })

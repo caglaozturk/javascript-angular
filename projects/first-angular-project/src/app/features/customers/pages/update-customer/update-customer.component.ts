@@ -3,7 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { Customer } from 'src/app/features/customers/models/customer';
-import { CustomerService } from 'src/app/services/customers/customer.service';
+import { CustomerService } from 'src/app/features/customers/services/customers/customer.service';
 
 @Component({
   selector: 'app-update-customer',

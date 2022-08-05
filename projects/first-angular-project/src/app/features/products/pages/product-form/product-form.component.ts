@@ -4,10 +4,10 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { Category } from 'src/app/features/categories/models/category';
 import { Product } from 'src/app/features/products/models/product';
-import { Supplier } from 'src/app/models/supplier';
+import { Supplier } from 'src/app/features/products/models/supplier';
 import { CategoryService } from 'src/app/features/categories/services/category/category.service';
 import { ProductsService } from 'src/app/features/products/services/products/products.service';
-import { SuppliersService } from 'src/app/services/suppliers/suppliers.service';
+import { SuppliersService } from 'src/app/features/products/services/suppliers/suppliers.service';
 
 @Component({
   selector: 'app-product-form',

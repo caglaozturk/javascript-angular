@@ -1,10 +1,10 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { LocalStorageService } from 'src/app/core/storage/services/local-storage.service';
 import { environment } from 'src/environments/environment';
-import { LocalStorageService } from '../../storage/services/local-storage.service';
-import { UserForLoginModel } from '../models/userForLoginModel';
-import { UserLoginResponseModel } from '../models/userLoginResponseModel';
+import { UserForLoginModel } from '../../models/userForLoginModel';
+import { UserLoginResponseModel } from '../../models/userLoginResponseModel';
 
 @Injectable({
   providedIn: 'root'

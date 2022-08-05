@@ -6,7 +6,7 @@ import { LoginPageComponent } from './pages/login-page/login-page.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { JwtModule } from "@auth0/angular-jwt";
-import { tokenGetter } from './services/auth.service';
+import { tokenGetter } from './services/auth/auth.service';
 
 @NgModule({
   declarations: [

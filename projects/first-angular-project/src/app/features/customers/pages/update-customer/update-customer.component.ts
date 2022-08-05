@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
-import { Customer } from 'src/app/models/customer';
+import { Customer } from 'src/app/features/customers/models/customer';
 import { CustomerService } from 'src/app/services/customers/customer.service';
 
 @Component({

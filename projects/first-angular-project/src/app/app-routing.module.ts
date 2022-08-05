@@ -7,9 +7,9 @@ import { ProductListComponent } from './features/products/components/product-lis
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { OrderListComponent } from './pages/order-list/order-list.component';
 import { ProductFormComponent } from './features/products/pages/product-form/product-form.component';
-import { UpdateCustomerComponent } from './pages/update-customer/update-customer.component';
+import { UpdateCustomerComponent } from './features/customers/pages/update-customer/update-customer.component';
 import { ProductDashboardComponent } from './features/products/pages/product-dashboard/product-dashboard.component';
-import { CustomerDashboardComponent } from './pages/customer-dashboard/customer-dashboard.component';
+import { CustomerDashboardComponent } from './features/customers/pages/customer-dashboard/customer-dashboard.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'product-cart-list', pathMatch: 'full' },

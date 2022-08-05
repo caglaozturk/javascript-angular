@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AddProductComponent } from './features/products/components/add-product/add-product.component';
 import { CalculatorComponent } from './components/calculator/calculator.component';
 import { ProductCardListComponent } from './features/products/components/product-card-list/product-card-list.component';
 import { ProductListComponent } from './features/products/components/product-list/product-list.component';
@@ -15,7 +14,6 @@ const routes: Routes = [
   { path: '', redirectTo: 'product-cart-list', pathMatch: 'full' },
   { path: 'homepage', component: ProductListComponent},
   { path: 'product-cart-list', component: ProductCardListComponent},
-  { path: 'add-product', component: AddProductComponent },
   { path: 'calculator', component: CalculatorComponent },
   { path: 'dashboard/customer/add', component: UpdateCustomerComponent },
   {path: 'dashboard/customers',component:CustomerDashboardComponent },

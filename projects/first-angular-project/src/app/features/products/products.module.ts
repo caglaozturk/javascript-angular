@@ -12,6 +12,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CategoryListComponent } from '../categories/components/category-list/category-list.component';
 import { ProductDashboardComponent } from './pages/product-dashboard/product-dashboard.component';
 import { ProductFormComponent } from './pages/product-form/product-form.component';
+import { CoreModule } from 'src/app/core/core.module';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { ProductFormComponent } from './pages/product-form/product-form.componen
     CommonModule,
     ProductsRoutingModule,
     FormsModule, 
+    CoreModule,
     ReactiveFormsModule
   ],
   exports: [

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from 'src/app/core/auth/services/auth/auth.service';
 
 @Component({
   selector: 'app-navbar',
@@ -13,9 +14,15 @@ export class NavbarComponent implements OnInit {
     {label: 'Register', url : '/dashboard/customer/add'},
     {label: 'Product Cart List', url : '/product-cart-list'}    
   ]
-  constructor() { }
+  constructor(private authService:AuthService) { }
 
   ngOnInit(): void {
+  }
+
+  testAuth() {
+    this.authService.test().subscribe(response => {
+      console.log(response);
+    });
   }
 
 }

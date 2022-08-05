@@ -34,6 +34,8 @@ export class LoginPageComponent implements OnInit {
     this.authService.login(userForLoginModel).subscribe(response => {
       this.authService.saveAuth(response);
       this.router.navigateByUrl('')
+
+      console.log(this.authService.isAuthenticated)
     });
   }
 

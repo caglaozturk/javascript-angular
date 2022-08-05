@@ -16,6 +16,9 @@ import { StorageModule } from './storage/storage.module';
     CoreRoutingModule,
     AuthModule,
     StorageModule
+  ],
+  exports: [
+    IfNotDirective
   ]
   //İfmodule'ı kullanan moduller de görebilsin diye burda import etmemiz gerekiyor
 })

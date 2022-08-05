@@ -13,7 +13,6 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomepageComponent } from './pages/homepage/homepage.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { RegisterComponent } from './components/register/register.component';
-import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { UpdateCustomerComponent } from './pages/update-customer/update-customer.component';
 import { ClickProductCardDirective } from './directives/clickProductCard/click-product-card.directive';
 import { OrderListComponent } from './pages/order-list/order-list.component';
@@ -36,7 +35,6 @@ import { CustomerDashboardComponent } from './pages/customer-dashboard/customer-
     HomepageComponent,
     NotFoundComponent,
     RegisterComponent,
-    DashboardComponent,
     UpdateCustomerComponent,
     ClickProductCardDirective,
     OrderListComponent,

@@ -4,7 +4,6 @@ import { AddProductComponent } from './components/add-product/add-product.compon
 import { CalculatorComponent } from './components/calculator/calculator.component';
 import { ProductCardListComponent } from './features/products/components/product-card-list/product-card-list.component';
 import { ProductListComponent } from './features/products/components/product-list/product-list.component';
-import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { OrderListComponent } from './pages/order-list/order-list.component';
 import { ProductFormComponent } from './features/products/pages/product-form/product-form.component';

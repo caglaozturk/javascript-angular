@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AddProductComponent } from './components/add-product/add-product.component';
+import { AddProductComponent } from './features/products/components/add-product/add-product.component';
 import { CalculatorComponent } from './components/calculator/calculator.component';
 import { ProductCardListComponent } from './features/products/components/product-card-list/product-card-list.component';
 import { ProductListComponent } from './features/products/components/product-list/product-list.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
-import { OrderListComponent } from './pages/order-list/order-list.component';
+import { OrderListComponent } from './features/orders/pages/order-list/order-list.component';
 import { ProductFormComponent } from './features/products/pages/product-form/product-form.component';
 import { UpdateCustomerComponent } from './features/customers/pages/update-customer/update-customer.component';
 import { ProductDashboardComponent } from './features/products/pages/product-dashboard/product-dashboard.component';

@@ -25,3 +25,8 @@ export class AuthService {
     this.localStorageService.set('token', userLoginResponseModel.access_token);
   }
 }
+
+
+export function tokenGetter() {
+  return localStorage.getItem("access_token");
+}

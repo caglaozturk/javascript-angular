@@ -1,0 +1,51 @@
+<button type="button" class="btn btn-dark" routerLink="/dashboard/customer/add">Add Customer</button>
+<br>
+<br>
+<ng-container [ngSwitch]="status">
+  <h1 *ngSwitchCase="'init'">Welcome...</h1>
+  <ng-container *ngSwitchCase="'loaded'">
+    <div *ngIf="customerList.length>0 ; else notFound"></div>
+    <table class="table table-light table-hover">
+      <thead>
+        <tr >
+          <th scope="col">ID</th>
+          <th scope="col">Company Name</th>
+          <th scope="col">Contact Name </th>
+          <th scope="col">Contact Title</th>
+          <th scope="col">Street</th>
+          <th scope="col">City</th>
+          <th scope="col">Region</th>
+          <th scope="col">Postal Code</th>
+          <th scope="col">Country</th>
+          <th scope="col">Phone</th>
+          <th scope="col">Customer Key</th>
+          <th scope="col">Update</th>
+          <th scope="col">Delete</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let customer of customerList">
+          <th scope="row">{{customer.id}}</th>
+          <td>{{customer.companyName}}</td>
+          <td>{{customer.contactName}}</td>
+          <td>{{customer.contactTitle}}</td>
+          <td>{{customer.street}}</td>
+          <td>{{customer.city}}</td>
+          <td>{{customer.region}}</td>
+          <td>{{customer.postalCode}}</td>
+          <td>{{customer.country}}</td>
+          <td>{{customer.phone}}</td>
+          <td>{{customer.customerKey}}</td>
+          <td><button type="button"(click)="selectedCustomerId(customer)" class="btn btn-warning"><i class="fa-solid fa-pen-to-square" style="color: black;"></i></button></td>
+          <!-- <td><button type="button" routerLink="dashboard/customer/{{customer.id}}" class="btn btn-warning"><i class="fa-solid fa-pen-to-square" style="color: black;"></i></button></td> -->
+          <td><button type="button"(click)="deleteCustomer(customer.id)" class="btn btn-danger"><i class="fa-solid fa-trash-can" style="color: black;"></i></button></td>
+        </tr>
+      </tbody>
+    </table>
+  </ng-container>
+  <div *ngSwitchDefault class="spinner-border text-success" role="status">
+    <span class="sr-only">Loading...</span>
+  </div>
+</ng-container>
+
+<ng-template #notFound>No Result Found!!!</ng-template>

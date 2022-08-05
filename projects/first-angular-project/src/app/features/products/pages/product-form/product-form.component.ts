@@ -2,10 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
-import { Category } from 'src/app/models/category';
+import { Category } from 'src/app/features/categories/models/category';
 import { Product } from 'src/app/models/product';
 import { Supplier } from 'src/app/models/supplier';
-import { CategoryService } from 'src/app/services/category/category.service';
+import { CategoryService } from 'src/app/features/categories/services/category/category.service';
 import { ProductsService } from 'src/app/features/products/services/products/products.service';
 import { SuppliersService } from 'src/app/services/suppliers/suppliers.service';
 

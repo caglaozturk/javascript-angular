@@ -15,8 +15,6 @@ import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { RegisterComponent } from './components/register/register.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { UpdateCustomerComponent } from './pages/update-customer/update-customer.component';
-import { ProductFormComponent } from './pages/product-form/product-form.component';
-import { ProductDashboardComponent } from './pages/product-dashboard/product-dashboard.component';
 import { ClickProductCardDirective } from './directives/clickProductCard/click-product-card.directive';
 import { OrderListComponent } from './pages/order-list/order-list.component';
 import { MultipleDirective } from './directives/multiple/multiple.directive';
@@ -26,6 +24,8 @@ import { ProductsModule } from './features/products/products.module';
 import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
 import { AuthModule } from './core/auth/auth.module';
+import { CategoriesModule } from './features/categories/categories.module';
+import { CustomerDashboardComponent } from './pages/customer-dashboard/customer-dashboard.component';
 
 @NgModule({
   declarations: [
@@ -38,13 +38,12 @@ import { AuthModule } from './core/auth/auth.module';
     RegisterComponent,
     DashboardComponent,
     UpdateCustomerComponent,
-    ProductFormComponent,
-    ProductDashboardComponent,
     ClickProductCardDirective,
     OrderListComponent,
     MultipleDirective,
     WelcomeDirective,
-    MyForDirective
+    MyForDirective,
+    CustomerDashboardComponent
   ],
   imports: [
     BrowserModule,
@@ -57,7 +56,8 @@ import { AuthModule } from './core/auth/auth.module';
     CoreModule,
     SharedModule,
     AuthModule,    
-    AppRoutingModule
+    AppRoutingModule, 
+    CategoriesModule
   ],
   providers: [],
   bootstrap: [AppComponent]

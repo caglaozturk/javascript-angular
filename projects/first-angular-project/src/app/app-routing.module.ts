@@ -7,9 +7,10 @@ import { ProductListComponent } from './features/products/components/product-lis
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { OrderListComponent } from './pages/order-list/order-list.component';
-import { ProductDashboardComponent } from './pages/product-dashboard/product-dashboard.component';
-import { ProductFormComponent } from './pages/product-form/product-form.component';
+import { ProductFormComponent } from './features/products/pages/product-form/product-form.component';
 import { UpdateCustomerComponent } from './pages/update-customer/update-customer.component';
+import { ProductDashboardComponent } from './features/products/pages/product-dashboard/product-dashboard.component';
+import { CustomerDashboardComponent } from './pages/customer-dashboard/customer-dashboard.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'product-cart-list', pathMatch: 'full' },
@@ -18,7 +19,7 @@ const routes: Routes = [
   { path: 'add-product', component: AddProductComponent },
   { path: 'calculator', component: CalculatorComponent },
   { path: 'dashboard/customer/add', component: UpdateCustomerComponent },
-  {path: 'dashboard/customers',component:DashboardComponent },
+  {path: 'dashboard/customers',component:CustomerDashboardComponent },
   {path: 'dashboard/customer/:id',component:UpdateCustomerComponent },
   {path: 'dashboard/product/add',component:ProductFormComponent },
   {path: 'dashboard/products',component:ProductDashboardComponent },

@@ -5,21 +5,25 @@ import { ProductsRoutingModule } from './products-routing.module';
 import { ProductCardListComponent } from './components/product-card-list/product-card-list.component';
 import { ProductCardComponent } from './components/product-card/product-card.component';
 import { ProductListComponent } from './components/product-list/product-list.component';
-import { SaleDirective } from '../directives/sale/sale.directive';
+import { SaleDirective } from './sale/sale.directive';
 import { KdvPipe } from './pipes/kdv/kdv.pipe';
 import { FilterProductPipe } from './pipes/filterProduct/filter-product.pipe';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { CategoryListComponent } from 'src/app/components/category-list/category-list.component';
+import { CategoryListComponent } from '../categories/components/category-list/category-list.component';
+import { ProductDashboardComponent } from './pages/product-dashboard/product-dashboard.component';
+import { ProductFormComponent } from './pages/product-form/product-form.component';
 
 @NgModule({
   declarations: [
     ProductCardListComponent,
     ProductCardComponent,
     ProductListComponent,
+    ProductDashboardComponent,
+    ProductFormComponent,
+    CategoryListComponent,
     SaleDirective,
     KdvPipe,
-    FilterProductPipe,
-    CategoryListComponent
+    FilterProductPipe
   ],
   imports: [
     CommonModule,

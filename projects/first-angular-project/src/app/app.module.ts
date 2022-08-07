@@ -9,9 +9,6 @@ import { AppComponent } from './app.component';
 import { AddProductComponent } from './features/products/components/add-product/add-product.component';
 import { CalculatorComponent } from './components/calculator/calculator.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { NavbarComponent } from './components/navbar/navbar.component';
-import { HomepageComponent } from './pages/homepage/homepage.component';
-import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { RegisterComponent } from './components/register/register.component';
 import { ClickProductCardDirective } from './directives/clickProductCard/click-product-card.directive';
 import { MultipleDirective } from './directives/multiple/multiple.directive';
@@ -19,20 +16,17 @@ import { WelcomeDirective } from './directives/welcome/welcome.directive';
 import { MyForDirective } from './directives/myFor/my-for.directive';
 import { ProductsModule } from './features/products/products.module';
 import { CoreModule } from './core/core.module';
-import { SharedModule } from './shared/shared.module';
 import { AuthModule } from './core/auth/auth.module';
 import { CategoriesModule } from './features/categories/categories.module';
 import { CustomersModule } from './features/customers/customers.module';
 import { OrdersModule } from './features/orders/orders.module';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     AddProductComponent,
     CalculatorComponent,
-    NavbarComponent,
-    HomepageComponent,
-    NotFoundComponent,
     RegisterComponent,
     ClickProductCardDirective,
     MultipleDirective,

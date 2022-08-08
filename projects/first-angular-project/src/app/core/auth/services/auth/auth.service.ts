@@ -9,7 +9,7 @@ import { environment } from 'src/environments/environment';
 import { TokenUserModel } from '../../models/tokenUserModel';
 import { UserForLoginModel } from '../../models/userForLoginModel';
 import { UserLoginResponseModel } from '../../models/userLoginResponseModel';
-import { setTokenUserModel } from '../../store/actions/auth.actions';
+import { removeTokenUserModel, setTokenUserModel } from '../../store/actions/auth.actions';
 import { AuthStates } from '../../store/auth.reducer';
 
 @Injectable({
@@ -36,8 +36,13 @@ export class AuthService {
     );
   }
 
+  removeTokenUserModel() {
+    this.store.dispatch(removeTokenUserModel());
+  }
+
   logOut() {
     this.localStorageService.remove('access_token');
+    this.removeTokenUserModel();
   }
 
   saveAuth(userLoginResponseModel: UserLoginResponseModel) {

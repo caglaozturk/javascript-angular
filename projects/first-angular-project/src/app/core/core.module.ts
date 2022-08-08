@@ -5,6 +5,8 @@ import { CoreRoutingModule } from './core-routing.module';
 import { IfNotDirective } from './directives/ifNot/if-not.directive';
 import { AuthModule } from './auth/auth.module';
 import { StorageModule } from './storage/storage.module';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { ErrorHandlingInterceptor } from './auth/interceptors/error-handling/error-handling.interceptor';
 
 
 @NgModule({
@@ -19,7 +21,8 @@ import { StorageModule } from './storage/storage.module';
   ],
   exports: [
     IfNotDirective
-  ]
+  ],
+  providers: [{ provide: HTTP_INTERCEPTORS, useClass: ErrorHandlingInterceptor, multi: true }]
   //İfmodule'ı kullanan moduller de görebilsin diye burda import etmemiz gerekiyor
 })
 export class CoreModule { }

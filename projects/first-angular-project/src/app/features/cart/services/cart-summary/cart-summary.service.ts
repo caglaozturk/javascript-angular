@@ -6,8 +6,8 @@ import { CartSummaryModels } from '../../models/cartSummaryModels';
   providedIn: 'root'
 })
 export class CartSummaryService {
-
-  addCart : EventEmitter<any> = new EventEmitter;
+  //INput output kullanmaya gerek yok onu html de kullanırken yapıyoduk
+  addCart : EventEmitter<any> = new EventEmitter; //duyuru yapacağımız olay(event)
 
   constructor() { }
 

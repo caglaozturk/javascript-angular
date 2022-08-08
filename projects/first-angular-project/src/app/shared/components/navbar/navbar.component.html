@@ -1,52 +1,58 @@
-<nav class="navbar navbar-dark navbar-expand-lg bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">ETİYA</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link" aria-current="page" routerLink="/dashboard/customers" routerLinkActive="active">Customer Dashboard</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" aria-current="page" routerLink="/dashboard/products" routerLinkActive="active">Product Dashboard</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" aria-current="page" routerLink="/order-list" routerLinkActive="active">Orders</a>
-          </li>          
-          <li class="nav-item">
-            <a class="nav-link" aria-current="page" routerLink="/product-cart-list" routerLinkActive="active">Homepage</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" aria-current="page" routerLink="/login" routerLinkActive="active">Login</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" aria-current="page" (click)="testAuth()">Test Auth</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/not-found">Not Found</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" routerLinkActive="active" data-bs-toggle="dropdown" aria-expanded="false">
-              All Menus
-            </a>
-            <ul class="dropdown-menu">
-              <ng-template ngFor let-link [ngForOf]="links">
-                <li>
-                  <a class="dropdown-item" routerLinkActive="active" routerLink="{{link.url}}">{{link.label}}</a>
-                </li>
-              </ng-template>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled">Disabled</a>
-          </li>
-        </ul>
-        <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button type="submit" class="btn btn-outline-light">Search</button>
-        </form>
+      <div class="collapse navbar-collapse row d-flex justify-content-lg-evenly" id="navbarSupportedContent">
+        <div class="col-9">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">    
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" routerLink="/product-cart-list" routerLinkActive="active">Homepage</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" routerLink="/login" routerLinkActive="active">Login</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" (click)="testAuth()">Test Auth</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" routerLinkActive="active" data-bs-toggle="dropdown" aria-expanded="false">
+                All Menus
+              </a>
+              <ul class="dropdown-menu">
+                <ng-template ngFor let-link [ngForOf]="links">
+                  <li>
+                    <a class="dropdown-item" routerLinkActive="active" routerLink="{{link.url}}">{{link.label}}</a>
+                  </li>
+                </ng-template>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled">Disabled</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-3 d-flex justify-content-end pe-3">
+          <app-cart-summary></app-cart-summary> 
+          <button class="btn btn-success" type="submit" routerLink="/login" *ngIf="isLoggedIn()==false"
+          routerLinkActive="active">Login</button>    
+          <ul class="navbar-nav me-3 mb-2 mb-lg-0 profile-menu"> 
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="fas fa-user"></i>
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#"><i class="fas fa-sliders-h fa-fw"></i> Account</a></li>
+                <li><a class="dropdown-item" href="#"><i class="fas fa-cog fa-fw"></i> Settings</a></li>
+                <li *ngIf="isLoggedIn()==true"><hr class="dropdown-divider"></li>
+                <li *ngIf="isLoggedIn()==true"><a class="dropdown-item" (click)="logOut()"><i class="fas fa-sign-out-alt fa-fw"></i> Log Out</a></li>
+              </ul>
+            </li>
+         </ul>
+        </div>
+
+
       </div>
     </div>
 </nav>

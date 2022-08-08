@@ -24,6 +24,10 @@ export class AuthService {
     );
   }
 
+  logOut() {
+    this.localStorageService.remove('access_token');
+  }
+
   saveAuth(userLoginResponseModel: UserLoginResponseModel) {
     this.localStorageService.set('access_token', userLoginResponseModel.access_token);
   }

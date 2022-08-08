@@ -21,6 +21,7 @@ import { CategoriesModule } from './features/categories/categories.module';
 import { CustomersModule } from './features/customers/customers.module';
 import { OrdersModule } from './features/orders/orders.module';
 import { SharedModule } from './shared/shared.module';
+import { CartModule } from './features/cart/cart.module';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,9 @@ import { SharedModule } from './shared/shared.module';
     AuthModule,    
     AppRoutingModule, 
     CategoriesModule, 
-    CustomersModule, OrdersModule
+    CustomersModule, 
+    OrdersModule, 
+    CartModule
   ],
   providers: [],
   bootstrap: [AppComponent]

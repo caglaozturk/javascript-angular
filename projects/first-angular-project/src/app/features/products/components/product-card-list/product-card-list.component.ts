@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { Product } from 'src/app/features/products/models/product';
 import { ProductsService } from 'src/app/features/products/services/products/products.service';
 
@@ -14,6 +14,7 @@ export class ProductCardListComponent implements OnInit {
   isProduct:boolean = false;
   today: number = Date.now();
   filterText:string="";
+  @Output() cartItemsChange:any = new EventEmitter();
   //httpClient: HttpClient
 
   constructor(private productService:ProductsService) { 
@@ -114,6 +115,7 @@ export class ProductCardListComponent implements OnInit {
     let itemToFind = this.cartItems.find(cart=>cart==product.name)
     if(!itemToFind){
       this.cartItems.push(product.name)
+      this.cartItemsChange.emit(this.cartItems);
     }
     console.log(this.cartItems)
     console.log("product list fonksiyonu: ",product.name)

@@ -1,0 +1,7 @@
+<div class="row">
+    <ng-template class="col-4" ngFor let-product [ngForOf]="productLists">
+        <div class="col-4 mt-2 mb-3">
+            <app-product-card [product]="product"></app-product-card>
+        </div>
+    </ng-template>
+</div>

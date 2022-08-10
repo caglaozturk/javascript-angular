@@ -1,27 +1,41 @@
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
-import { ProductsService } from 'src/app/features/products/services/products/products.service';
+import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
+import {MegaMenuItem} from 'primeng/api';
 import { Category } from '../../models/Category';
-import { CategoriesService } from '../../services/categories/categories.service';
+import {CategoriesService} from '../../services/categories/categories.service';
 
 @Component({
   selector: 'app-categories-menu-bar',
   templateUrl: './categories-menu-bar.component.html',
   styleUrls: ['./categories-menu-bar.component.css'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.Default, //todo: research onPush
 })
 export class CategoriesMenuBarComponent implements OnInit {
-  categories!:Category[];
+  categories!: Category[];
+  items!: MegaMenuItem[];
 
-  constructor(private categoriesService: CategoriesService, private productsService: ProductsService) { }
+  constructor(private categoriesService: CategoriesService) {}
 
   ngOnInit(): void {
     this.getCategories();
   }
 
   getCategories() {
-    this.categoriesService.getList().subscribe((response => {
+    this.categoriesService.getList().subscribe(response => {
       this.categories = response;
-      console.log("🚀 ~ file: categories-menu-bar.component.ts ~ line 24 ~ CategoriesMenuBarComponent ~ this.categoriesService.getList ~ this.categories", this.categories)
-    }))
+
+      this.configureItems();
+    });
+  }
+
+  configureItems() {
+    this.items = this.categories.map(category => {
+      // /categories/1 // Route params
+      // /categories?category=1 // Query params
+      return {
+        label: category.name,
+        routerLink: [''],
+        queryParams: {categoryId: category.id},
+      };
+    });
   }
 }

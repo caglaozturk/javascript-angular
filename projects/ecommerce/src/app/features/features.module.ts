@@ -18,6 +18,7 @@ import { CategoriesModule } from './categories/categories.module';
     ProductsModule,
     SharedModule,
     CategoriesModule
-  ]
+  ],
+  exports: [],
 })
 export class FeaturesModule { }

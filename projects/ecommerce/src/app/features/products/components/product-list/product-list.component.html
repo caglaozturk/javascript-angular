@@ -1,7 +1,16 @@
 <div class="row">
-    <ng-template class="col-4" ngFor let-product [ngForOf]="productLists | filterProduct: categoryId">
-        <div class="col-4 mt-2 mb-3">
+    <ng-container [ngSwitch]="fetchStatus">
+        <ng-template
+          *ngSwitchCase="'loaded'"
+          let-product
+          ngFor
+          [ngForOf]="productLists | filterProduct: categoryId"
+        >
+          <div class="col-4 mt-2 mb-3">
             <app-product-card [product]="product"></app-product-card>
-        </div>
-    </ng-template>
+          </div>
+        </ng-template>
+    
+        <app-card-skeleton *ngSwitchCase="'pending'"></app-card-skeleton>
+    </ng-container>
 </div>

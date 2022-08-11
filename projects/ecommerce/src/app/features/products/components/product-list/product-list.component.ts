@@ -11,16 +11,25 @@ import { ProductsService } from '../../services/products/products.service';
 export class ProductListComponent implements OnInit {
   productLists!:Product[];
   @Input() categoryId!: number;
+  fetchStatus = 'pending';
 
   constructor(private productsService:ProductsService, private categoriesService:CategoriesService) { }
 
   ngOnInit(): void {
-    this.getAllProducts();
+    setTimeout(() => {
+      this.getAllProducts();
+    }, 1500);
   }
 
   getAllProducts() {
-    this.productsService.getAll().subscribe((response) => {
-      this.productLists = response;
-    });
+    this.productsService.getAll().subscribe(
+      (response) => {
+        this.productLists = response;
+        this.fetchStatus = 'loaded';
+      },
+      (error) => {
+        this.fetchStatus = 'error';
+      }
+    );
   }
 }

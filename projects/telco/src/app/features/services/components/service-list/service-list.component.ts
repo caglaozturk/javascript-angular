@@ -11,23 +11,38 @@ import { ServicesService } from '../../services/services.service';
 export class ServiceListComponent implements OnInit {
 
   services!: Service[];
+  start:number = 1;
+  end:number = 5;
+  tempServices!: Service[];
+  allDataArray:number[] = [];
 
   constructor(private serviceService: ServicesService, private router:Router) { }
 
   ngOnInit() {
-    this.getList();
+    this.getAllList();
   }
 
-  getList() {
-    this.serviceService.getList().subscribe(data => this.services = data);
+  getAllList() {
+    this.serviceService.getList().subscribe(data => {
+      this.tempServices = data;
+      let allDataCount = Math.ceil(data.length / 5);
+      for (let index = 1; index <= allDataCount; index++) {
+        this.allDataArray.push(index)
+      }
+      this.fillData(1);
+    });
   }
 
   deleteService(id:number){
     if(confirm("Are you sure want to delete?")){
       this.serviceService.delete(id).subscribe(()=>{
-        this.getList();
+        this.getAllList();
       })
     } 
+  }
+
+  fillData(index:number) {
+    this.services =  this.tempServices.slice((index-1)*5, 5*index)
   }
 
   selectedServiceId(selectedService: Service):void{

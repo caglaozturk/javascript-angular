@@ -4,7 +4,6 @@ import { ServiceFormComponent } from './components/service-form/service-form.com
 import { ServiceListComponent } from './components/service-list/service-list.component';
 
 const routes: Routes = [
-  {path:'', component:ServiceListComponent, pathMatch:'full'},
   {path:'services',component:ServiceListComponent},
   {path:'service/add',component:ServiceFormComponent},
   {path:'service/:id',component:ServiceFormComponent},

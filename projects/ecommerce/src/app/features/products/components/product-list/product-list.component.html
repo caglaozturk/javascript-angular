@@ -10,7 +10,20 @@
             <app-product-card [product]="product"></app-product-card>
           </div>
         </ng-template>
+
+        <ng-container *ngSwitchCase="'pending'">
+          <div class="col-4" *ngFor="let i of pageSize | createFakeArray">
+            <app-card-skeleton class="mt-3 mb-2"></app-card-skeleton>
+          </div>
+        </ng-container>
     
-        <app-card-skeleton *ngSwitchCase="'pending'"></app-card-skeleton>
+        <ng-container *ngSwitchCase="'error'">
+          <div class="col-12">
+            <div class="alert alert-danger" role="alert">
+              Unable to fetch products from server.
+            </div>
+          </div>
+        </ng-container>
+        
     </ng-container>
 </div>

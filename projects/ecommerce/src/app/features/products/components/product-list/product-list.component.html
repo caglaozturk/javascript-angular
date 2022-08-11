@@ -1,5 +1,5 @@
 <div class="row">
-    <ng-template class="col-4" ngFor let-product [ngForOf]="productLists">
+    <ng-template class="col-4" ngFor let-product [ngForOf]="productLists | filterProduct: categoryId">
         <div class="col-4 mt-2 mb-3">
             <app-product-card [product]="product"></app-product-card>
         </div>

@@ -6,13 +6,17 @@ import { InputTextModule } from 'primeng/inputtext';
 import { ButtonModule } from 'primeng/button';
 import { FooterComponent } from './components/footer/footer.component';
 import { DashboardLayoutComponent } from './layouts/dashboard-layout/dashboard-layout.component';
+import { SpinnerComponent } from './components/spinner/spinner.component';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { SpinnerInterceptor } from '../core/interceptors/spinner/spinner.interceptor';
 
 
 @NgModule({
   declarations: [
     NavbarComponent,
     FooterComponent,
-    DashboardLayoutComponent
+    DashboardLayoutComponent,
+    SpinnerComponent
   ],
   imports: [
     CommonModule,
@@ -23,7 +27,9 @@ import { DashboardLayoutComponent } from './layouts/dashboard-layout/dashboard-l
   exports: [
     NavbarComponent,
     FooterComponent,
-    DashboardLayoutComponent
-  ]
+    DashboardLayoutComponent,
+    SpinnerComponent
+  ],
+  providers: [{ provide: HTTP_INTERCEPTORS, useClass: SpinnerInterceptor, multi: true }]
 })
 export class SharedModule { }

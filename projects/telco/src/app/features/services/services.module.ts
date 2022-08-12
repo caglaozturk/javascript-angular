@@ -10,11 +10,14 @@ import { ServiceListComponent } from './components/service-list/service-list.com
 import { ServiceFormComponent } from './components/service-form/service-form.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SharedModule } from 'src/app/shared/shared.module';
+import { SkeletonModule } from "primeng/skeleton";
+import { BootstrapListComponent } from './components/bootstrap-list/bootstrap-list.component';
 
 @NgModule({
   declarations: [
     ServiceListComponent,
-    ServiceFormComponent
+    ServiceFormComponent,
+    BootstrapListComponent
   ],
   imports: [
     CommonModule,
@@ -26,7 +29,8 @@ import { SharedModule } from 'src/app/shared/shared.module';
     ReactiveFormsModule,
     BrowserAnimationsModule,
     ToolbarModule,
-    SharedModule
+    SharedModule,
+    SkeletonModule
   ]
 })
 export class ServicesModule { }

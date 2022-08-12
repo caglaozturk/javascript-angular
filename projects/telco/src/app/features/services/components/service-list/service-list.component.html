@@ -1,6 +1,6 @@
 <app-dashboard-layout>
     <h3 class="mt-5">PrimeNg</h3>
-    <div class="card">    
+    <div class="card" *ngIf="fetchStatus=='loaded'">    
         <p-toolbar styleClass="p-mb-4">
             <ng-template pTemplate="left">
                 <button pButton pRipple label="New" icon="pi pi-plus" class="p-button-success p-mr-2" routerLink="/service/add"></button>
@@ -27,33 +27,29 @@
             </ng-template>
         </p-table>
     </div>
-</app-dashboard-layout>
-
-
-<app-dashboard-layout>
-    <h3 class="mt-5">Bootstrap</h3>
-    <table class="table table-striped">
-        <thead>
-          <tr>
-            <th scope="col">Id</th>
-            <th scope="col">Name</th>
-            <th style="display:flex;justify-content:end; padding-right: 50px;">Update - Delete</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr *ngFor="let service of services">
-            <th scope="row">{{ service.id }}</th>
-            <td>{{ service.name }}</td>
-            <td style="display:flex;justify-content:end; padding-right: 50px;">
-                <button style="margin-right: 25px" type="button" (click)="selectedServiceId(service)" class="btn btn-warning"><i class="fa-solid fa-pen-to-square" style="color: black;"></i></button>
-                <button type="button" (click)="deleteService(service.id)" class="btn btn-danger"><i class="fa-solid fa-trash-can" style="color: black;"></i></button>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-      <nav aria-label="Page navigation example">
-        <ul class="pagination justify-content-end me-5">
-            <li class="page-item" *ngFor="let index of allDataArray"><a class="page-link" (click)="fillData(index)">{{ index }}</a></li>
-        </ul>
-      </nav>
+    <div class="card" *ngIf="fetchStatus=='pending'">
+        <p-table [value]="emptyArray">
+            <ng-template pTemplate="header">
+              <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th style="display:flex;justify-content:end; padding-right: 50px;">Update - Delete</th>
+              </tr>
+            </ng-template>
+            <ng-template pTemplate="body" let-i>
+              <tr>
+                <td><p-skeleton></p-skeleton></td>
+                <td><p-skeleton></p-skeleton></td>
+                <td><p-skeleton></p-skeleton></td>
+              </tr>
+            </ng-template>
+          </p-table>
+    </div>
+    <ng-container *ngIf="fetchStatus=='error'">
+        <div class="col-12">
+          <div class="alert alert-danger" role="alert">
+            Unable to fetch products from server.
+          </div>
+        </div>
+    </ng-container>
 </app-dashboard-layout>

@@ -4,19 +4,16 @@ import { Service } from '../../models/service';
 import { ServicesService } from '../../services/services.service';
 
 @Component({
-  selector: 'app-service-list',
-  templateUrl: './service-list.component.html',
-  styleUrls: ['./service-list.component.css']
+  selector: 'app-bootstrap-list',
+  templateUrl: './bootstrap-list.component.html',
+  styleUrls: ['./bootstrap-list.component.css']
 })
-export class ServiceListComponent implements OnInit {
-
+export class BootstrapListComponent implements OnInit {
   services!: Service[];
   start:number = 1;
   end:number = 5;
   tempServices!: Service[];
   allDataArray:number[] = [];
-  fetchStatus = 'pending';
-  emptyArray:number[] = [1,2,3,4,5];
 
   constructor(private serviceService: ServicesService, private router:Router) { }
 
@@ -25,8 +22,6 @@ export class ServiceListComponent implements OnInit {
   }
 
   getAllList() {
-    this.fetchStatus = 'pending';
-    setTimeout(() => {
     this.serviceService.getList().subscribe(data => {
       this.tempServices = data;
       let allDataCount = Math.ceil(data.length / 5);
@@ -34,13 +29,7 @@ export class ServiceListComponent implements OnInit {
         this.allDataArray.push(index)
       }
       this.fillData(1);
-        this.fetchStatus = 'loaded';
-      },
-      (error) => {
-        this.fetchStatus = 'error';
-      }
-      );  
-    }, 2000);
+    });
   }
 
   deleteService(id:number){
@@ -58,4 +47,5 @@ export class ServiceListComponent implements OnInit {
   selectedServiceId(selectedService: Service):void{
      this.router.navigateByUrl(`service/${selectedService.id}`);
   }
+
 }

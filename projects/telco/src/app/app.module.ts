@@ -9,6 +9,7 @@ import { HttpClientModule } from '@angular/common/http';
 import {ToastModule} from 'primeng/toast';
 import { MessageService } from 'primeng/api';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CoreModule } from './core/core.module';
 
 
 @NgModule({
@@ -22,7 +23,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     FeaturesModule,
     HttpClientModule,
     ToastModule,    
-    BrowserAnimationsModule,
+    BrowserAnimationsModule, CoreModule,
   ],
   providers: [MessageService],
   bootstrap: [AppComponent]

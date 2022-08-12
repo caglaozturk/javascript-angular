@@ -9,7 +9,7 @@ export class SpinnerHandlerService {
   public showSpinner: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
 
   handleRequest = (state: string = 'minus'): void => {
-    this.numberOfRequests = (state === 'plus') ? this.numberOfRequests + 1 : this.numberOfRequests - 1;
+    this.numberOfRequests = (state === 'plus') ? this.numberOfRequests + 1 : (this.numberOfRequests - 1 <= 0 ? 0 : --this.numberOfRequests);
     this.showSpinner.next(this.numberOfRequests > 0);
   };
 }

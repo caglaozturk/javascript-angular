@@ -43,13 +43,9 @@
                 <td><p-skeleton></p-skeleton></td>
               </tr>
             </ng-template>
-          </p-table>
+        </p-table>
     </div>
     <ng-container *ngIf="fetchStatus=='error'">
-        <div class="col-12">
-          <div class="alert alert-danger" role="alert">
-            Unable to fetch products from server.
-          </div>
-        </div>
+      <app-server-error></app-server-error>
     </ng-container>
 </app-dashboard-layout>

@@ -16,13 +16,16 @@ export class SpinnerInterceptor implements HttpInterceptor {
   ) {}
 
   intercept(request: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<unknown>> {
-    this.spinnerHandler.handleRequest('plus');
+    if(request.method != 'GET')  this.spinnerHandler.handleRequest('plus');
     return next
       .handle(request)
       .pipe(
-        finalize(this.finalize.bind(this))
+        finalize(()=>{
+          setTimeout(() => {
+            this.spinnerHandler.handleRequest();
+          }, 3000);          
+        })
       );
   }
-
   finalize = (): void => this.spinnerHandler.handleRequest();
 }

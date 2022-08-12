@@ -9,6 +9,7 @@ import { DashboardLayoutComponent } from './layouts/dashboard-layout/dashboard-l
 import { SpinnerComponent } from './components/spinner/spinner.component';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { SpinnerInterceptor } from '../core/interceptors/spinner/spinner.interceptor';
+import { ServerErrorComponent } from './components/server-error/server-error.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { SpinnerInterceptor } from '../core/interceptors/spinner/spinner.interce
     NavbarComponent,
     FooterComponent,
     DashboardLayoutComponent,
-    SpinnerComponent
+    SpinnerComponent,
+    ServerErrorComponent
   ],
   imports: [
     CommonModule,
@@ -28,7 +30,8 @@ import { SpinnerInterceptor } from '../core/interceptors/spinner/spinner.interce
     NavbarComponent,
     FooterComponent,
     DashboardLayoutComponent,
-    SpinnerComponent
+    SpinnerComponent,
+    ServerErrorComponent
   ],
   providers: [{ provide: HTTP_INTERCEPTORS, useClass: SpinnerInterceptor, multi: true }]
 })

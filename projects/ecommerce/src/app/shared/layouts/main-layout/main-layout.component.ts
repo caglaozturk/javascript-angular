@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LoadingService } from 'src/app/core/services/loading.service';
 
 @Component({
   selector: 'app-main-layout',
@@ -6,10 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./main-layout.component.css']
 })
 export class MainLayoutComponent implements OnInit {
-
-  constructor() { }
+  isLoading: boolean = false;
+  constructor(private loadingService:LoadingService) { }
 
   ngOnInit(): void {
+    this.subscribeToLoadingStatus();
+  }
+
+  subscribeToLoadingStatus() {
+
   }
 
 }

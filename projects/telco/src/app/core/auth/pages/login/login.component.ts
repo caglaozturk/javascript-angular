@@ -1,6 +1,7 @@
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../../services/auth/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   templateUrl: './login.component.html',
@@ -10,7 +11,8 @@ export class LoginComponent implements OnInit {
   loginForm!: FormGroup;
   constructor(
     private formBuilder: FormBuilder,
-    private authService: AuthService
+    private authService: AuthService,
+    private router:Router
   ) {}
 
   ngOnInit(): void {
@@ -28,6 +30,7 @@ export class LoginComponent implements OnInit {
       console.log(response);
       if (response.success) {
         this.authService.saveToken(response);
+        this.router.navigateByUrl('/');
       }
     });
   }

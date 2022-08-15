@@ -25,4 +25,9 @@ export class AuthService {
   saveToken(userLoginResponse: UserLoginResponse) {
     this.localStorageService.set('token', userLoginResponse.access_token);
   }
+  isAuthenticated():boolean {
+    //token var mı
+    if(!this.localStorageService.get('token'))  return false;
+    return true;
+  }
 }

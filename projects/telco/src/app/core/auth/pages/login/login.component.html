@@ -1,36 +1,50 @@
-<div class="surface-card p-4 shadow-2 border-round w-full lg:w-6">
-  <div>
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="800px" height="600px" viewBox="0 0 800 600" enable-background="new 0 0 800 600" xml:space="preserve">
+    <linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="174.7899" y1="186.34" x2="330.1259" y2="186.34" gradientTransform="matrix(0.8538 0.5206 -0.5206 0.8538 147.9521 -79.1468)">
+        <stop offset="0" style="stop-color: #ffc035" />
+        <stop offset="0.221" style="stop-color: #f9a639" />
+        <stop offset="1" style="stop-color: #e64f48" />
+    </linearGradient>
+    <circle fill="url(#SVGID_1_)" cx="266.498" cy="211.378" r="77.668" />
+    <linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="290.551" y1="282.9592" x2="485.449" y2="282.9592">
+        <stop offset="0" style="stop-color: #ffa33a" />
+        <stop offset="0.0992" style="stop-color: #e4a544" />
+        <stop offset="0.9624" style="stop-color: #00b59c" />
+    </linearGradient>
+    <circle fill="url(#SVGID_2_)" cx="388" cy="282.959" r="97.449" />
+    <linearGradient id="SVGID_3_" gradientUnits="userSpaceOnUse" x1="180.3469" y1="362.2723" x2="249.7487" y2="362.2723">
+        <stop offset="0" style="stop-color: #12b3d6" />
+        <stop offset="1" style="stop-color: #7853a8" />
+    </linearGradient>
+    <circle fill="url(#SVGID_3_)" cx="215.048" cy="362.272" r="34.701" />
+    <linearGradient id="SVGID_4_" gradientUnits="userSpaceOnUse" x1="367.3469" y1="375.3673" x2="596.9388" y2="375.3673">
+        <stop offset="0" style="stop-color: #12b3d6" />
+        <stop offset="1" style="stop-color: #7853a8" />
+    </linearGradient>
+    <circle fill="url(#SVGID_4_)" cx="482.143" cy="375.367" r="114.796" />
+    <linearGradient id="SVGID_5_" gradientUnits="userSpaceOnUse" x1="365.4405" y1="172.8044" x2="492.4478" y2="172.8044" gradientTransform="matrix(0.8954 0.4453 -0.4453 0.8954 127.9825 -160.7537)">
+        <stop offset="0" style="stop-color: #ffa33a" />
+        <stop offset="1" style="stop-color: #df3d8e" />
+    </linearGradient>
+    <circle fill="url(#SVGID_5_)" cx="435.095" cy="184.986" r="63.504" />
+</svg>
+
+<div class="container">
+    <h2>login</h2>
     <form [formGroup]="loginForm">
-      <label for="email1" class="block text-900 font-medium mb-2"
-        >Username</label
-      >
-      <input
-        formControlName="userName"
-        id="email1"
-        type="text"
-        pInputText
-        class="w-full mb-3"
-      />
-
-      <label for="password1" class="block text-900 font-medium mb-2"
-        >Password</label
-      >
-      <input
-        formControlName="password"
-        id="password1"
-        type="password"
-        pInputText
-        class="w-full mb-3"
-      />
-
-      <button
-        (click)="login()"
-        pButton
-        pRipple
-        label="Sign In"
-        icon="pi pi-user"
-        class="w-full"
-      ></button>
+        <input type="text"  formControlName="userName" class="email" placeholder="Username" />
+        <br />
+        <input type="password" formControlName="password" class="pwd" placeholder="Password" />
     </form>
-  </div>
+    <a href="#" class="link"> forgot your password ? </a>
+    <br />
+    <button class="register">
+        <span>register</span>
+    </button>
+    <button class="signin" (click)="login()">
+        <span>sign in</span>
+    </button>
+    <h3>your registration is complete !</h3>
+    <h3>your sign in is complete !</h3>
+    <div class="reg"></div>
+    <div class="sig"></div>
 </div>

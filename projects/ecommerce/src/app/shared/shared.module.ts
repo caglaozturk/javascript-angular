@@ -1,11 +1,12 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { NavbarComponent } from './components/navbar/navbar.component';
-import { MainLayoutComponent } from './layouts/main-layout/main-layout.component';
-import { DashboardLayoutComponent } from './layouts/dashboard-layout/dashboard-layout.component';
-import { CardSkeletonComponent } from './components/card-skeleton/card-skeleton.component';
-import { SkeletonModule } from 'primeng/skeleton';
-import { CoreModule } from '../core/core.module';
+import {SkeletonModule} from 'primeng/skeleton';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
+import {NavbarComponent} from './components/navbar/navbar.component';
+import {MainLayoutComponent} from './layouts/main-layout/main-layout.component';
+import {DashboardLayoutComponent} from './layouts/dashboard-layout/dashboard-layout.component';
+import {CardSkeletonComponent} from './components/card-skeleton/card-skeleton.component';
+import {CoreModule} from '../core/core.module';
+import {RouterModule} from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { CoreModule } from '../core/core.module';
   imports: [
     CommonModule,
     SkeletonModule,
-    CoreModule
+    CoreModule,
+    RouterModule
   ],
   exports: [
     NavbarComponent,

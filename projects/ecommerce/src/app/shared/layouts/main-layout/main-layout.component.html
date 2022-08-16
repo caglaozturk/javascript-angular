@@ -1,5 +1,11 @@
-<app-navbar></app-navbar>
-<div class="container mt-4">
+<div class="min-vh-100 d-flex flex-column">
+  <app-navbar></app-navbar>
+
+  <div class="container flex-fill">
     <ng-content></ng-content>
+  </div>
+
+  <app-footer></app-footer>
 </div>
+
 <app-loading-overlay></app-loading-overlay>

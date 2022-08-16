@@ -7,13 +7,17 @@ import {DashboardLayoutComponent} from './layouts/dashboard-layout/dashboard-lay
 import {CardSkeletonComponent} from './components/card-skeleton/card-skeleton.component';
 import {CoreModule} from '../core/core.module';
 import {RouterModule} from '@angular/router';
+import { DashboardHomeComponent } from './pages/dashboard-home/dashboard-home.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
     NavbarComponent,
     MainLayoutComponent,
     DashboardLayoutComponent,
-    CardSkeletonComponent
+    CardSkeletonComponent,
+    DashboardHomeComponent,
+    FooterComponent
   ],
   imports: [
     CommonModule,

@@ -56,6 +56,6 @@ export class ServiceListComponent implements OnInit {
   }
 
   selectedServiceId(selectedService: Service):void{
-     this.router.navigateByUrl(`service/${selectedService.id}`);
+     this.router.navigateByUrl(`dashboard/service/service/${selectedService.id}`);
   }
 }

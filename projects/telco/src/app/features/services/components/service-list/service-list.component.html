@@ -1,7 +1,7 @@
 <div class="card" *ngIf="fetchStatus == 'loaded'">
     <p-toolbar styleClass="p-mb-4">
         <ng-template pTemplate="left">
-            <button pButton pRipple label="New" icon="pi pi-plus" class="p-button-success p-mr-2" routerLink="/service/add"></button>
+            <button pButton pRipple label="New" icon="pi pi-plus" class="p-button-success p-mr-2" routerLink="/dashboard/service/service/add"></button>
         </ng-template>
     </p-toolbar>
     <p-table [value]="tempServices" [paginator]="true" [rows]="5" [showCurrentPageReport]="true" currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries" [rowsPerPageOptions]="[5, 10, 25, 50]">

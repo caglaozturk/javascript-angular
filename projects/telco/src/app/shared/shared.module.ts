@@ -10,6 +10,7 @@ import { SpinnerComponent } from './components/spinner/spinner.component';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { SpinnerInterceptor } from '../core/interceptors/spinner/spinner.interceptor';
 import { ServerErrorComponent } from './components/server-error/server-error.component';
+import { MainLayoutComponent } from './layouts/main-layout/main-layout.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { ServerErrorComponent } from './components/server-error/server-error.com
     FooterComponent,
     DashboardLayoutComponent,
     SpinnerComponent,
-    ServerErrorComponent
+    ServerErrorComponent,
+    MainLayoutComponent
   ],
   imports: [
     CommonModule,
@@ -31,7 +33,8 @@ import { ServerErrorComponent } from './components/server-error/server-error.com
     FooterComponent,
     DashboardLayoutComponent,
     SpinnerComponent,
-    ServerErrorComponent
+    ServerErrorComponent,
+    MainLayoutComponent
   ],
   providers: [{ provide: HTTP_INTERCEPTORS, useClass: SpinnerInterceptor, multi: true }]
 })

@@ -1,50 +1,54 @@
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="800px" height="600px" viewBox="0 0 800 600" enable-background="new 0 0 800 600" xml:space="preserve">
-    <linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="174.7899" y1="186.34" x2="330.1259" y2="186.34" gradientTransform="matrix(0.8538 0.5206 -0.5206 0.8538 147.9521 -79.1468)">
-        <stop offset="0" style="stop-color: #ffc035" />
-        <stop offset="0.221" style="stop-color: #f9a639" />
-        <stop offset="1" style="stop-color: #e64f48" />
-    </linearGradient>
-    <circle fill="url(#SVGID_1_)" cx="266.498" cy="211.378" r="77.668" />
-    <linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="290.551" y1="282.9592" x2="485.449" y2="282.9592">
-        <stop offset="0" style="stop-color: #ffa33a" />
-        <stop offset="0.0992" style="stop-color: #e4a544" />
-        <stop offset="0.9624" style="stop-color: #00b59c" />
-    </linearGradient>
-    <circle fill="url(#SVGID_2_)" cx="388" cy="282.959" r="97.449" />
-    <linearGradient id="SVGID_3_" gradientUnits="userSpaceOnUse" x1="180.3469" y1="362.2723" x2="249.7487" y2="362.2723">
-        <stop offset="0" style="stop-color: #12b3d6" />
-        <stop offset="1" style="stop-color: #7853a8" />
-    </linearGradient>
-    <circle fill="url(#SVGID_3_)" cx="215.048" cy="362.272" r="34.701" />
-    <linearGradient id="SVGID_4_" gradientUnits="userSpaceOnUse" x1="367.3469" y1="375.3673" x2="596.9388" y2="375.3673">
-        <stop offset="0" style="stop-color: #12b3d6" />
-        <stop offset="1" style="stop-color: #7853a8" />
-    </linearGradient>
-    <circle fill="url(#SVGID_4_)" cx="482.143" cy="375.367" r="114.796" />
-    <linearGradient id="SVGID_5_" gradientUnits="userSpaceOnUse" x1="365.4405" y1="172.8044" x2="492.4478" y2="172.8044" gradientTransform="matrix(0.8954 0.4453 -0.4453 0.8954 127.9825 -160.7537)">
-        <stop offset="0" style="stop-color: #ffa33a" />
-        <stop offset="1" style="stop-color: #df3d8e" />
-    </linearGradient>
-    <circle fill="url(#SVGID_5_)" cx="435.095" cy="184.986" r="63.504" />
-</svg>
-
-<div class="container">
-    <h2>login</h2>
-    <form [formGroup]="loginForm">
-        <input type="text"  formControlName="userName" class="email" placeholder="Username" />
-        <br />
-        <input type="password" formControlName="password" class="pwd" placeholder="Password" />
-    </form>
-    <a href="#" class="link"> forgot your password ? </a>
-    <br />
-    <button class="register">
-        <span>register</span>
-    </button>
-    <button class="signin" (click)="login()">
-        <span>sign in</span>
-    </button>
-    <h3>your registration is complete !</h3>
-    <h3>your sign in is complete !</h3>
-    <div class="reg"></div>
-    <div class="sig"></div>
+<div class="section">
+    <div class="container">
+        <div class="row full-height justify-content-center">
+            <div class="col-12 text-center align-self-center py-5">
+                <div class="section pb-5 pt-5 pt-sm-2 text-center">
+                    <h6 class="mb-0 pb-3"><span>Log In </span><span>Sign Up</span></h6>
+                    <input class="checkbox" type="checkbox" id="reg-log" name="reg-log" />
+                    <label for="reg-log"></label>
+                    <div class="card-3d-wrap mx-auto">
+                        <div class="card-3d-wrapper">
+                            <div class="card-front">
+                                <div class="center-wrap">
+                                    <div class="section text-center">
+                                        <h4 class="mb-4 pb-3">Log In</h4>
+                                        <div class="form-group">
+                                            <input type="text" formControlName="userName" name="logemail" class="form-style" placeholder="Your Username" id="logemail" autocomplete="off" />
+                                            <i class="input-icon uil uil-at"></i>
+                                        </div>
+                                        <div class="form-group mt-2">
+                                            <input type="password" formControlName="password" name="logpass" class="form-style" placeholder="Your Password" id="logpass" autocomplete="off" />
+                                            <i class="input-icon uil uil-lock-alt"></i>
+                                        </div>
+                                        <a href="#" class="btn mt-4">submit</a>
+                                        <p class="mb-0 mt-4 text-center"><a href="#0" class="link">Forgot your password?</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-back">
+                                <div class="center-wrap">
+                                    <div class="section text-center">
+                                        <h4 class="mb-4 pb-3">Sign Up</h4>
+                                        <div class="form-group">
+                                            <input type="text" name="logname" class="form-style" placeholder="Your Full Name" id="logname" autocomplete="off" />
+                                            <i class="input-icon uil uil-user"></i>
+                                        </div>
+                                        <div class="form-group mt-2">
+                                            <input type="email" name="logemail" class="form-style" placeholder="Your Email" id="logemail" autocomplete="off" />
+                                            <i class="input-icon uil uil-at"></i>
+                                        </div>
+                                        <div class="form-group mt-2">
+                                            <input type="password" name="logpass" class="form-style" placeholder="Your Password" id="logpass" autocomplete="off" />
+                                            <i class="input-icon uil uil-lock-alt"></i>
+                                        </div>
+                                        <button (click)="login()" class="btn mt-4">submit</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

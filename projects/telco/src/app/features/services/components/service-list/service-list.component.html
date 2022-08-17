@@ -1,4 +1,4 @@
-<app-dashboard-layout>
+<app-main-layout>
     <div class="card" *ngIf="fetchStatus=='loaded'">    
         <p-toolbar styleClass="p-mb-4">
             <ng-template pTemplate="left">
@@ -47,4 +47,4 @@
     <ng-container *ngIf="fetchStatus=='error'">
       <app-server-error></app-server-error>
     </ng-container>
-</app-dashboard-layout>
+</app-main-layout>

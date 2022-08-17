@@ -1,18 +1,3 @@
-<div class="min-vh-100 d-flex flex-column" *ngIf="isToken; else noToken;">
-    <header>
-        <app-navbar></app-navbar>
-    </header>
-  
-    <main class="flex-fill">
-      <router-outlet></router-outlet>
-    </main>
-  
-    <footer>
-        <app-footer></app-footer>
-    </footer>
-</div>
-<ng-template #noToken>
-    <router-outlet></router-outlet>
-</ng-template>
+<router-outlet></router-outlet>
 <p-toast></p-toast>
 <app-spinner></app-spinner>

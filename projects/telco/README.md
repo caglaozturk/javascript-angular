@@ -13,8 +13,10 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ### Demos
 
+![Screenshot_9](https://user-images.githubusercontent.com/26042284/185207075-a3d9da1d-0891-443b-96cc-8b00d32cdcf7.png)
 ![Screenshot_2](https://user-images.githubusercontent.com/26042284/184600957-6e42011d-2b44-4d2d-b7e1-825783a88ca0.png)
 ![Screenshot_3](https://user-images.githubusercontent.com/26042284/184600967-08152f89-2ecc-4c4f-ad3e-9d623b6c441f.png)
+
 
 ## ⚙️ Getting Started
 

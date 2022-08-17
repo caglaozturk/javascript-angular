@@ -5,6 +5,8 @@ import { HttpClient } from '@angular/common/http';
 import { UserForLogin } from '../../models/userForLogin';
 import { UserLoginResponse } from '../../models/userLoginResponse';
 import { LocalStorageService } from 'src/app/core/storage/services/local-storage/local-storage.service';
+import {JwtHelperService} from '@auth0/angular-jwt';
+import {Router} from '@angular/router';
 
 @Injectable({
   providedIn: 'root',
@@ -13,7 +15,9 @@ export class AuthService {
   apiControllerUrl: string = `${environment.apiUrl}/auth`;
   constructor(
     private httpClient: HttpClient,
-    private localStorageService: LocalStorageService
+    private localStorageService: LocalStorageService,
+    private jwtHelperService: JwtHelperService,
+    private router: Router
   ) {}
 
   login(userForLoginModel: UserForLogin): Observable<UserLoginResponse> {
@@ -25,9 +29,14 @@ export class AuthService {
   saveToken(userLoginResponse: UserLoginResponse) {
     this.localStorageService.set('token', userLoginResponse.access_token);
   }
-  isAuthenticated():boolean {
-    //token var mı
-    if(!this.localStorageService.get('token'))  return false;
+
+  get isAuthenticated(): boolean {
+    if (this.jwtHelperService.isTokenExpired()) return false;
     return true;
+  }
+
+  logOut() {
+    this.localStorageService.remove('token');
+    this.router.navigateByUrl('');
   }
 }

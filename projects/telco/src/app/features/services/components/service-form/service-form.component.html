@@ -1,11 +1,9 @@
-<app-main-layout>
-    <div class="container w-75" *ngIf="serviceForm">
-        <form [formGroup]="serviceForm" (ngSubmit)="save()">
-            <div class="form-group m-3">
-                <label for="name" class="block">Name</label>
-                <input id="name" formControlName="name" type="text" aria-describedby="username-help" class="form-control" pInputText />
-            </div>
-            <button pButton label="Save" type="submit" class="p-button-success m-3" icon="pi pi-check" iconPos="left" [disabled]="serviceForm.invalid"></button>
-        </form>
-    </div>
-</app-main-layout>
+<div class="container w-75" *ngIf="serviceForm">
+    <form [formGroup]="serviceForm" (ngSubmit)="save()">
+        <div class="form-group m-3">
+            <label for="name" class="block">Name</label>
+            <input id="name" formControlName="name" type="text" aria-describedby="username-help" class="form-control" pInputText />
+        </div>
+        <button pButton label="Save" type="submit" class="p-button-success m-3" icon="pi pi-check" iconPos="left" [disabled]="serviceForm.invalid"></button>
+    </form>
+</div>

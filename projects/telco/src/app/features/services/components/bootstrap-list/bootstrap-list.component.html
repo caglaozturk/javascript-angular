@@ -1,27 +1,27 @@
-<app-main-layout>
-    <h3 class="mt-5">Bootstrap</h3>
-    <table class="table table-striped">
-        <thead>
-          <tr>
+<h3 class="mt-5">Bootstrap</h3>
+<table class="table table-striped">
+    <thead>
+        <tr>
             <th scope="col">Id</th>
             <th scope="col">Name</th>
-            <th style="display:flex;justify-content:end; padding-right: 50px;">Update - Delete</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr *ngFor="let service of services">
+            <th style="display: flex; justify-content: end; padding-right: 50px">Update - Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let service of services">
             <th scope="row">{{ service.id }}</th>
             <td>{{ service.name }}</td>
-            <td style="display:flex;justify-content:end; padding-right: 50px;">
-                <button style="margin-right: 25px" type="button" (click)="selectedServiceId(service)" class="btn btn-warning"><i class="fa-solid fa-pen-to-square" style="color: black;"></i></button>
-                <button type="button" (click)="deleteService(service.id)" class="btn btn-danger"><i class="fa-solid fa-trash-can" style="color: black;"></i></button>
+            <td style="display: flex; justify-content: end; padding-right: 50px">
+                <button style="margin-right: 25px" type="button" (click)="selectedServiceId(service)" class="btn btn-warning"><i class="fa-solid fa-pen-to-square" style="color: black"></i></button>
+                <button type="button" (click)="deleteService(service.id)" class="btn btn-danger"><i class="fa-solid fa-trash-can" style="color: black"></i></button>
             </td>
-          </tr>
-        </tbody>
-      </table>
-      <nav aria-label="Page navigation example">
-        <ul class="pagination justify-content-end me-5">
-            <li class="page-item" *ngFor="let index of allDataArray"><a class="page-link" (click)="fillData(index)">{{ index }}</a></li>
-        </ul>
-      </nav>
-</app-main-layout>
+        </tr>
+    </tbody>
+</table>
+<nav aria-label="Page navigation example">
+    <ul class="pagination justify-content-end me-5">
+        <li class="page-item" *ngFor="let index of allDataArray">
+            <a class="page-link" (click)="fillData(index)">{{ index }}</a>
+        </li>
+    </ul>
+</nav>

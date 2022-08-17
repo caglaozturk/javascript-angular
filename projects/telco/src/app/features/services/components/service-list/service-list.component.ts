@@ -40,7 +40,7 @@ export class ServiceListComponent implements OnInit {
         this.fetchStatus = 'error';
       }
       );  
-    }, 2000);
+    }, 100);
   }
 
   deleteService(id:number){

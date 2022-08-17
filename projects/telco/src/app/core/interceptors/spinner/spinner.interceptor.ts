@@ -23,7 +23,7 @@ export class SpinnerInterceptor implements HttpInterceptor {
         finalize(()=>{
           setTimeout(() => {
             this.spinnerHandler.handleRequest();
-          }, 3000);          
+          }, 500);          
         })
       );
   }

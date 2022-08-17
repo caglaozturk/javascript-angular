@@ -23,7 +23,8 @@ import { CoreModule } from './core/core.module';
     FeaturesModule,
     HttpClientModule,
     ToastModule,    
-    BrowserAnimationsModule, CoreModule
+    BrowserAnimationsModule, 
+    CoreModule
   ],
   providers: [MessageService],
   bootstrap: [AppComponent]

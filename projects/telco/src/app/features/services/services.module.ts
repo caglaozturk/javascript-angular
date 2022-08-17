@@ -31,6 +31,7 @@ import { BootstrapListComponent } from './components/bootstrap-list/bootstrap-li
     ToolbarModule,
     SharedModule,
     SkeletonModule
-  ]
+  ],
+  exports: [ ServiceListComponent ]
 })
 export class ServicesModule { }

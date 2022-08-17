@@ -8,23 +8,25 @@
                     <label for="reg-log"></label>
                     <div class="card-3d-wrap mx-auto">
                         <div class="card-3d-wrapper">
-                            <div class="card-front">
-                                <div class="center-wrap">
-                                    <div class="section text-center">
-                                        <h4 class="mb-4 pb-3">Log In</h4>
-                                        <div class="form-group">
-                                            <input type="text" formControlName="userName" name="logemail" class="form-style" placeholder="Your Username" id="logemail" autocomplete="off" />
-                                            <i class="input-icon uil uil-at"></i>
+                            <form [formGroup]="loginForm">
+                                <div class="card-front">
+                                    <div class="center-wrap">
+                                        <div class="section text-center">
+                                            <h4 class="mb-4 pb-3">Log In</h4>
+                                            <div class="form-group">
+                                                <input type="text" formControlName="userName" class="form-style" placeholder="Your Username" autocomplete="off" />
+                                                <i class="input-icon uil uil-at"></i>
+                                            </div>
+                                            <div class="form-group mt-2">
+                                                <input type="password" formControlName="password" class="form-style" placeholder="Your Password" autocomplete="off" />
+                                                <i class="input-icon uil uil-lock-alt"></i>
+                                            </div>
+                                            <button type="button"  (click)="login()" class="btn mt-4">Submit</button>
+                                            <p class="mb-0 mt-4 text-center"><a href="#0" class="link">Forgot your password?</a></p>
                                         </div>
-                                        <div class="form-group mt-2">
-                                            <input type="password" formControlName="password" name="logpass" class="form-style" placeholder="Your Password" id="logpass" autocomplete="off" />
-                                            <i class="input-icon uil uil-lock-alt"></i>
-                                        </div>
-                                        <a href="#" class="btn mt-4">submit</a>
-                                        <p class="mb-0 mt-4 text-center"><a href="#0" class="link">Forgot your password?</a></p>
                                     </div>
                                 </div>
-                            </div>
+                            </form>
                             <div class="card-back">
                                 <div class="center-wrap">
                                     <div class="section text-center">
@@ -34,14 +36,14 @@
                                             <i class="input-icon uil uil-user"></i>
                                         </div>
                                         <div class="form-group mt-2">
-                                            <input type="email" name="logemail" class="form-style" placeholder="Your Email" id="logemail" autocomplete="off" />
+                                            <input type="email" name="logemail" class="form-style" placeholder="Your Email" autocomplete="off" />
                                             <i class="input-icon uil uil-at"></i>
                                         </div>
                                         <div class="form-group mt-2">
-                                            <input type="password" name="logpass" class="form-style" placeholder="Your Password" id="logpass" autocomplete="off" />
+                                            <input type="password" class="form-style" placeholder="Your Password" autocomplete="off" />
                                             <i class="input-icon uil uil-lock-alt"></i>
                                         </div>
-                                        <button (click)="login()" class="btn mt-4">submit</button>
+                                        <button type="button" class="btn mt-4">submit</button>
                                     </div>
                                 </div>
                             </div>

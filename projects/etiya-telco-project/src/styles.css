@@ -1,3 +1,7 @@
+/* You can add global styles to this file, and also import other style files */
+
 @import url('https://fonts.googleapis.com/css2?family=Anybody:wght@300&display=swap');
 
-body { background: url('./assets/img/background.png') !important; }
+body{    
+    background-color: #061F3E !important;
+}

@@ -6,6 +6,8 @@ import { SettingsMenuComponent } from './components/settings-menu/settings-menu.
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { UserInfoComponent } from './components/user-info/user-info.component';
 import { TableInfoComponent } from './components/table-info/table-info.component';
+import { WarningMessageComponent } from './components/warning-message/warning-message.component';
+import { ConfirmComponent } from './components/confirm/confirm.component';
 
 
 
@@ -16,7 +18,9 @@ import { TableInfoComponent } from './components/table-info/table-info.component
     SettingsMenuComponent,
     NavbarComponent,
     UserInfoComponent,
-    TableInfoComponent
+    TableInfoComponent,
+    WarningMessageComponent,
+    ConfirmComponent
   ],
   imports: [
     CommonModule
@@ -27,7 +31,9 @@ import { TableInfoComponent } from './components/table-info/table-info.component
     SettingsMenuComponent,
     NavbarComponent,
     UserInfoComponent,
-    TableInfoComponent
+    TableInfoComponent,
+    WarningMessageComponent,
+    ConfirmComponent
   ]
 })
 export class SharedModule { }

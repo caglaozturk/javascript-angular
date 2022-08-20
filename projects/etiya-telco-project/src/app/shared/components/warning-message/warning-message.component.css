@@ -3,7 +3,7 @@
     margin-left: 12px;
     display: flex;
     align-items: center;
-    width: 40%;
+    width: 30%;
     height: 59px;
   
     background: #83a6d1;
@@ -12,14 +12,17 @@
   }
   
   .e-warn-img {
-    width: 91px;
-    height: 79px;
+    max-width: 91px;
+    max-height: 79px;
+    margin-left: 1px;
   }
   
   .e-warn-text {
+    display: flex;
+    align-items: center;
     height: 45px;
     font-family: 'Anybody';
-    font-style: bold;
+    font-style: normal;
     font-weight: 700;
     font-size: 21px;
     line-height: 23px;

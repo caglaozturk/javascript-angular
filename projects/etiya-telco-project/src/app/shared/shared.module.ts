@@ -13,7 +13,10 @@ import { WarningMessageComponent } from './components/warning-message/warning-me
 import { MainLayoutComponent } from './components/main-layout/main-layout.component';
 import { InfoTitleComponent } from './components/info-title/info-title.component';
 import { AddNewItemButtonComponent } from './components/add-new-item-button/add-new-item-button.component';
-
+import { CustomToastComponent } from './components/custom-toast/custom-toast.component';
+import {ButtonModule} from 'primeng/button';
+import {ToastModule} from 'primeng/toast';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -30,10 +33,14 @@ import { AddNewItemButtonComponent } from './components/add-new-item-button/add-
     WarningMessageComponent,
     MainLayoutComponent,
     InfoTitleComponent,
-    AddNewItemButtonComponent
+    AddNewItemButtonComponent,
+    CustomToastComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    ToastModule,
+    ButtonModule,
+    BrowserAnimationsModule
   ],
   exports:[
     OverlayTitleComponent,
@@ -48,7 +55,8 @@ import { AddNewItemButtonComponent } from './components/add-new-item-button/add-
     WarningMessageComponent,
     MainLayoutComponent,
     InfoTitleComponent,
-    AddNewItemButtonComponent
+    AddNewItemButtonComponent,
+    CustomToastComponent
   ]
 })
 export class SharedModule { }

@@ -19,6 +19,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ConfirmationDialogComponent } from './components/confirmation-dialog/confirmation-dialog.component';
 import { MessageService } from 'primeng/api';
 import { OfferSelectionComponent } from './components/offer-selection/offer-selection.component';
+import { TabMenuComponent } from './components/tab-menu/tab-menu.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { OfferSelectionComponent } from './components/offer-selection/offer-sele
     AddNewItemButtonComponent,
     CustomToastComponent,
     ConfirmationDialogComponent,
-    OfferSelectionComponent
+    OfferSelectionComponent,
+    TabMenuComponent
   ],
   imports: [
     CommonModule,
@@ -59,7 +61,8 @@ import { OfferSelectionComponent } from './components/offer-selection/offer-sele
     AddNewItemButtonComponent,
     CustomToastComponent,
     ConfirmationDialogComponent,
-    OfferSelectionComponent
+    OfferSelectionComponent,
+    TabMenuComponent
   ],
   providers:[ MessageService ],
 })

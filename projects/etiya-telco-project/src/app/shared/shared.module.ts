@@ -8,7 +8,6 @@ import { UserInfoComponent } from './components/user-info/user-info.component';
 import { TableInfoComponent } from './components/table-info/table-info.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { ContainerComponent } from './components/container/container.component';
-import { ConfirmComponent } from './components/confirm/confirm.component';
 import { WarningMessageComponent } from './components/warning-message/warning-message.component';
 import { MainLayoutComponent } from './components/main-layout/main-layout.component';
 import { InfoTitleComponent } from './components/info-title/info-title.component';
@@ -17,7 +16,8 @@ import { CustomToastComponent } from './components/custom-toast/custom-toast.com
 import {ButtonModule} from 'primeng/button';
 import {ToastModule} from 'primeng/toast';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import { ConfirmationDialogComponent } from './components/confirmation-dialog/confirmation-dialog.component';
+import { MessageService } from 'primeng/api';
 
 @NgModule({
   declarations: [
@@ -29,12 +29,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     TableInfoComponent,
     NotFoundComponent,
     ContainerComponent,
-    ConfirmComponent,
     WarningMessageComponent,
     MainLayoutComponent,
     InfoTitleComponent,
     AddNewItemButtonComponent,
-    CustomToastComponent
+    CustomToastComponent,
+    ConfirmationDialogComponent
   ],
   imports: [
     CommonModule,
@@ -51,12 +51,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     TableInfoComponent,
     NotFoundComponent,
     ContainerComponent,
-    ConfirmComponent,
     WarningMessageComponent,
     MainLayoutComponent,
     InfoTitleComponent,
     AddNewItemButtonComponent,
-    CustomToastComponent
-  ]
+    CustomToastComponent,
+    ConfirmationDialogComponent
+  ],
+  providers:[ MessageService ],
 })
 export class SharedModule { }

@@ -1,4 +1,4 @@
-<div class="m-3">
+<!-- <div class="m-3">
     <app-custom-toast customSeverity="info" customSummary="Forgot password?" customDetail="Please contact your system administrator"></app-custom-toast>
 </div>
 <div class="m-3">
@@ -6,8 +6,10 @@
     <app-warning-message [warnText]="warnText" [warnAlert]="warnAlert" warnIcon="./assets/img/warning.png"></app-warning-message>
     <app-warning-message [warnText]="warnText2" [warnAlert]="warnAlert" warnIcon="./assets/img/warning.png"></app-warning-message>
     <app-warning-message [warnText]="warnText3" [warnAlert]="warnAlert"  warnIcon="./assets/img/security.png"></app-warning-message>
-</div>
+</div> -->
 
+<!-- confirm component çağırmak için çağırcağımız yerde yazılacak kod -->
+<app-confirmation-dialog></app-confirmation-dialog>
 <router-outlet></router-outlet>
 
 <!-- <app-add-new-item-button [btnAdressTitle]="'Add New Adress'"></app-add-new-item-button> -->
@@ -21,9 +23,6 @@
 <!-- warning message çağıralacak yerde yazılacak kod -->
 <!-- <app-warning-message warnText="Wrong Username or Password. Please try again"></app-warning-message>
 <app-warning-message warnText="The password was entered incorrectly 3 times."></app-warning-message> -->
-
-<!-- confirm component çağırmak için çağırcağımız yerde yazılacak kod -->
-<!-- <app-confirm></app-confirm> -->
 
 <!-- container html içerisine not found çağırmak için yazılacak kod -->
 <!-- <app-container>

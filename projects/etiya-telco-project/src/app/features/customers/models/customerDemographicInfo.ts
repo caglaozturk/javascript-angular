@@ -6,5 +6,5 @@ export interface CustomerDemographicInfo{
     middleName:string;
     birthDate:string;
     fatherName:string;
-    nationalityID:number;
+    nationalityId:number;
 }

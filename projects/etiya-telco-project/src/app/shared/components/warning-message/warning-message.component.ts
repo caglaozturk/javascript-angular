@@ -13,4 +13,5 @@ export class WarningMessageComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
 }

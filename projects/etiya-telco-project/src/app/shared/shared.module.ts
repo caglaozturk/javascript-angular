@@ -8,18 +8,25 @@ import { UserInfoComponent } from './components/user-info/user-info.component';
 import { TableInfoComponent } from './components/table-info/table-info.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { ContainerComponent } from './components/container/container.component';
+import { ConfirmComponent } from './components/confirm/confirm.component';
 import { WarningMessageComponent } from './components/warning-message/warning-message.component';
 import { MainLayoutComponent } from './components/main-layout/main-layout.component';
 import { InfoTitleComponent } from './components/info-title/info-title.component';
 import { AddNewItemButtonComponent } from './components/add-new-item-button/add-new-item-button.component';
-import { CustomToastComponent } from './components/custom-toast/custom-toast.component';
+import { ShowcaseComponent } from './pages/showcase/showcase.component';
+import { TableAccordionComponent } from './components/table-accordion/table-accordion.component';
+import { BarMenuComponent } from './components/bar-menu/bar-menu.component';
+import { ConfirmationDialogComponent } from './components/confirmation-dialog/confirmation-dialog.component';
 import {ButtonModule} from 'primeng/button';
 import {ToastModule} from 'primeng/toast';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ConfirmationDialogComponent } from './components/confirmation-dialog/confirmation-dialog.component';
 import { MessageService } from 'primeng/api';
-import { OfferSelectionComponent } from './components/offer-selection/offer-selection.component';
+import { CustomToastComponent } from './components/custom-toast/custom-toast.component';
+import { BasketComponent } from './components/basket/basket.component';
 import { TabMenuComponent } from './components/tab-menu/tab-menu.component';
+import { OfferSelectionComponent } from './components/offer-selection/offer-selection.component';
+
+
 
 @NgModule({
   declarations: [
@@ -31,14 +38,19 @@ import { TabMenuComponent } from './components/tab-menu/tab-menu.component';
     TableInfoComponent,
     NotFoundComponent,
     ContainerComponent,
+    ConfirmComponent,
     WarningMessageComponent,
     MainLayoutComponent,
     InfoTitleComponent,
     AddNewItemButtonComponent,
-    CustomToastComponent,
+    ShowcaseComponent,
+    TableAccordionComponent,
+    BarMenuComponent,
     ConfirmationDialogComponent,
-    OfferSelectionComponent,
-    TabMenuComponent
+    CustomToastComponent,
+    BasketComponent,
+    TabMenuComponent,
+    OfferSelectionComponent
   ],
   imports: [
     CommonModule,
@@ -55,15 +67,19 @@ import { TabMenuComponent } from './components/tab-menu/tab-menu.component';
     TableInfoComponent,
     NotFoundComponent,
     ContainerComponent,
+    ConfirmComponent,
     WarningMessageComponent,
     MainLayoutComponent,
     InfoTitleComponent,
     AddNewItemButtonComponent,
-    CustomToastComponent,
+    TableAccordionComponent,
+    BarMenuComponent,
     ConfirmationDialogComponent,
-    OfferSelectionComponent,
-    TabMenuComponent
+    CustomToastComponent,
+    BasketComponent,
+    TabMenuComponent,
+    OfferSelectionComponent
   ],
-  providers:[ MessageService ],
+  providers:[MessageService]
 })
 export class SharedModule { }

@@ -1,21 +1,62 @@
-<app-tab-menu></app-tab-menu>
-
-<!-- <app-offer-selection></app-offer-selection> -->
-
-<!-- <div class="m-3">
-    <app-custom-toast customSeverity="info" customSummary="Forgot password?" customDetail="Please contact your system administrator"></app-custom-toast>
-</div>
-<div class="m-3">
-    <button type="button" class="btn btn-warning" (click)="showWarnAlert()">Show Warn Message</button>
-    <app-warning-message [warnText]="warnText" [warnAlert]="warnAlert" warnIcon="./assets/img/warning.png"></app-warning-message>
-    <app-warning-message [warnText]="warnText2" [warnAlert]="warnAlert" warnIcon="./assets/img/warning.png"></app-warning-message>
-    <app-warning-message [warnText]="warnText3" [warnAlert]="warnAlert"  warnIcon="./assets/img/security.png"></app-warning-message>
-</div> -->
-
-<!-- confirm component çağırmak için çağırcağımız yerde yazılacak kod -->
-<!-- <app-confirmation-dialog></app-confirmation-dialog> -->
+<!-- <app-basket></app-basket> -->
 <router-outlet></router-outlet>
 
+
+
+<!-- form frame ve labelların olduğu frame çağrılması istenen yerde yazılması gereken html -->
+
+<!-- <div class="e-frame-container">
+    <span class="e-form-frame"></span>
+</div> -->
+
+<!-- <div class="e-frame-container">
+    <span class="e-frame">
+        <br>
+        <br>
+        <div class="container">
+            <div class="row">
+                <div class="col-2">
+                    <label class="e-frame-label">Email:</label>
+                </div>
+                <div class="col-4">
+                    <label class="e-frame-label">Mertkaya@gmail.com</label>
+                </div>
+                <div class="col-2">
+                    <label class="e-frame-label">Home Phone:</label>
+                </div>
+                <div class="col-4">
+                    <label class="e-frame-label">4567623</label>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-2">
+                    <label class="e-frame-label">Mobile Phone:</label>
+                </div>
+                <div class="col-4">
+                    <label class="e-frame-label">546 678 12 87</label>
+                </div>
+                <div class="col-2">
+                    <label class="e-frame-label">Fax:</label>
+                </div>
+                <div class="col-4">
+                    <label class="e-frame-label">1234567</label>
+                </div>
+            </div>
+            
+            <button class="e-btn-remove"></button>
+            <button class="e-btn-edit"></button>
+        </div>
+    </span>
+</div> -->
+
+
+<!-- *********************************************************** -->
+
+<!-- accordionu çağırmak için kullanılan kod -->
+<!-- <app-table-accordion></app-table-accordion> -->
+
+<!-- Button ve dropdown için html -->
 <!-- <app-add-new-item-button [btnAdressTitle]="'Add New Adress'"></app-add-new-item-button> -->
 
 <!-- info title çağrılcak yerde yazılacak kod -->
@@ -27,6 +68,9 @@
 <!-- warning message çağıralacak yerde yazılacak kod -->
 <!-- <app-warning-message warnText="Wrong Username or Password. Please try again"></app-warning-message>
 <app-warning-message warnText="The password was entered incorrectly 3 times."></app-warning-message> -->
+
+<!-- confirm component çağırmak için çağırcağımız yerde yazılacak kod -->
+<!-- <app-confirm></app-confirm> -->
 
 <!-- container html içerisine not found çağırmak için yazılacak kod -->
 <!-- <app-container>
@@ -63,14 +107,14 @@ login inputları ve butonu -->
     <p class="e-form-text">Please your enter Username and password to login</p>
     <form>
         <div class="form-group">
-            <input type="text" class="e-input" placeholder="Username" />
+            <input type="text" class="e-input-white" placeholder="Username" />
         </div>
         <div class="form-group">
-            <input type="password" class="e-input" placeholder="Password" />
+            <input type="password" class="e-input-white" placeholder="Password" />
         </div>
         <div class="form-check d-flex justify-content-between mb-4">    
             <div>
-                <input type="checkbox" class="form-check-input e-check" id="exampleCheck1" />
+                <input type="checkbox" class="form-check-input e-check-box" id="exampleCheck1" />
                 <label class="form-check-label e-check-label"  for="exampleCheck1">Remember Me</label>   
             </div>   
             <div>
@@ -78,7 +122,7 @@ login inputları ve butonu -->
             </div>      
                          
         </div>
-        <button type="submit" class="btn btn-primary e-btn">LOG IN</button>
+        <button type="submit" class="btn btn-primary e-btn-login">LOG IN</button>
     </form>
     
 </div> -->

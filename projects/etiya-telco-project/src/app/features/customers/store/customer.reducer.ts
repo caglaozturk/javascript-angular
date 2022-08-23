@@ -1,6 +1,4 @@
 import { Customer } from "../models/customer";
-import { addressToAddReducer } from "./addressToAdd/addressToAdd.reducer";
-import { contactMediumToAddReducer } from "./contactMediumToAdd/contactMediumToAdd.reducer";
 import { customerToAddReducer } from "./customerToAdd/customerToAdd.reducer";
 
 export interface CustomerState {
@@ -8,7 +6,5 @@ export interface CustomerState {
 }
 
 export const customersReducers = {
-    customerToAdd: customerToAddReducer,
-    addressToAdd: addressToAddReducer,
-    contactMediumToAdd: contactMediumToAddReducer
+    customerToAdd: customerToAddReducer
 }
